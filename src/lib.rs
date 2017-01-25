@@ -8,24 +8,34 @@ extern crate libc;
 
 #[repr(C)]
 pub struct __BindgenUnionField<T>(::core::marker::PhantomData<T>);
-impl <T> __BindgenUnionField<T> {
+impl<T> __BindgenUnionField<T> {
     #[inline]
-    pub fn new() -> Self { __BindgenUnionField(::core::marker::PhantomData) }
+    pub fn new() -> Self {
+        __BindgenUnionField(::core::marker::PhantomData)
+    }
     #[inline]
-    pub unsafe fn as_ref(&self) -> &T { ::core::mem::transmute(self) }
+    pub unsafe fn as_ref(&self) -> &T {
+        ::core::mem::transmute(self)
+    }
     #[inline]
-    pub unsafe fn as_mut(&mut self) -> &mut T { ::core::mem::transmute(self) }
+    pub unsafe fn as_mut(&mut self) -> &mut T {
+        ::core::mem::transmute(self)
+    }
 }
-impl <T> ::core::default::Default for __BindgenUnionField<T> {
+impl<T> ::core::default::Default for __BindgenUnionField<T> {
     #[inline]
-    fn default() -> Self { Self::new() }
+    fn default() -> Self {
+        Self::new()
+    }
 }
-impl <T> ::core::clone::Clone for __BindgenUnionField<T> {
+impl<T> ::core::clone::Clone for __BindgenUnionField<T> {
     #[inline]
-    fn clone(&self) -> Self { Self::new() }
+    fn clone(&self) -> Self {
+        Self::new()
+    }
 }
-impl <T> ::core::marker::Copy for __BindgenUnionField<T> { }
-impl <T> ::core::fmt::Debug for __BindgenUnionField<T> {
+impl<T> ::core::marker::Copy for __BindgenUnionField<T> {}
+impl<T> ::core::fmt::Debug for __BindgenUnionField<T> {
     fn fmt(&self, fmt: &mut ::core::fmt::Formatter) -> ::core::fmt::Result {
         fmt.write_str("__BindgenUnionField")
     }
@@ -1399,11 +1409,8 @@ pub const PROCESSOR_PERF_BOOST_MODE_ENABLED: libc::c_uint = 1;
 pub const PROCESSOR_PERF_BOOST_MODE_AGGRESSIVE: libc::c_uint = 2;
 pub const PROCESSOR_PERF_BOOST_MODE_EFFICIENT_ENABLED: libc::c_uint = 3;
 pub const PROCESSOR_PERF_BOOST_MODE_EFFICIENT_AGGRESSIVE: libc::c_uint = 4;
-pub const PROCESSOR_PERF_BOOST_MODE_AGGRESSIVE_AT_GUARANTEED: libc::c_uint =
-    5;
-pub const PROCESSOR_PERF_BOOST_MODE_EFFICIENT_AGGRESSIVE_AT_GUARANTEED:
-          libc::c_uint =
-    6;
+pub const PROCESSOR_PERF_BOOST_MODE_AGGRESSIVE_AT_GUARANTEED: libc::c_uint = 5;
+pub const PROCESSOR_PERF_BOOST_MODE_EFFICIENT_AGGRESSIVE_AT_GUARANTEED: libc::c_uint = 6;
 pub const PROCESSOR_PERF_BOOST_MODE_MAX: libc::c_uint = 6;
 pub const PROCESSOR_PERF_AUTONOMOUS_MODE_DISABLED: libc::c_uint = 0;
 pub const PROCESSOR_PERF_AUTONOMOUS_MODE_ENABLED: libc::c_uint = 1;
@@ -1522,16 +1529,13 @@ pub const CM_RESOURCE_MEMORY_24: libc::c_uint = 16;
 pub const CM_RESOURCE_MEMORY_CACHEABLE: libc::c_uint = 32;
 pub const CM_RESOURCE_MEMORY_WINDOW_DECODE: libc::c_uint = 64;
 pub const CM_RESOURCE_MEMORY_BAR: libc::c_uint = 128;
-pub const CM_RESOURCE_MEMORY_COMPAT_FOR_INACCESSIBLE_RANGE: libc::c_uint =
-    256;
+pub const CM_RESOURCE_MEMORY_COMPAT_FOR_INACCESSIBLE_RANGE: libc::c_uint = 256;
 pub const CM_RESOURCE_MEMORY_LARGE: libc::c_uint = 3584;
 pub const CM_RESOURCE_MEMORY_LARGE_40: libc::c_uint = 512;
 pub const CM_RESOURCE_MEMORY_LARGE_48: libc::c_uint = 1024;
 pub const CM_RESOURCE_MEMORY_LARGE_64: libc::c_uint = 2048;
-pub const CM_RESOURCE_MEMORY_LARGE_40_MAXLEN: libc::c_ulonglong =
-    1099511627520;
-pub const CM_RESOURCE_MEMORY_LARGE_48_MAXLEN: libc::c_ulonglong =
-    281474976645120;
+pub const CM_RESOURCE_MEMORY_LARGE_40_MAXLEN: libc::c_ulonglong = 1099511627520;
+pub const CM_RESOURCE_MEMORY_LARGE_48_MAXLEN: libc::c_ulonglong = 281474976645120;
 pub const CM_RESOURCE_MEMORY_LARGE_64_MAXLEN: libc::c_longlong = -4294967296;
 pub const CM_RESOURCE_PORT_MEMORY: libc::c_uint = 0;
 pub const CM_RESOURCE_PORT_IO: libc::c_uint = 1;
@@ -1753,16 +1757,11 @@ pub const TRANSACTION_NOTIFY_PROMOTE: libc::c_uint = 134217728;
 pub const TRANSACTION_NOTIFY_PROMOTE_NEW: libc::c_uint = 268435456;
 pub const TRANSACTION_NOTIFY_REQUEST_OUTCOME: libc::c_uint = 536870912;
 pub const TRANSACTION_NOTIFY_COMMIT_FINALIZE: libc::c_uint = 1073741824;
-pub const TRANSACTIONMANAGER_OBJECT_PATH: &'static [u8; 22usize] =
-    b"\\TransactionManager\\\\\x00";
-pub const TRANSACTION_OBJECT_PATH: &'static [u8; 15usize] =
-    b"\\Transaction\\\\\x00";
-pub const ENLISTMENT_OBJECT_PATH: &'static [u8; 14usize] =
-    b"\\Enlistment\\\\\x00";
-pub const RESOURCE_MANAGER_OBJECT_PATH: &'static [u8; 19usize] =
-    b"\\ResourceManager\\\\\x00";
-pub const TRANSACTION_NOTIFICATION_TM_ONLINE_FLAG_IS_CLUSTERED: libc::c_uint =
-    1;
+pub const TRANSACTIONMANAGER_OBJECT_PATH: &'static [u8; 22usize] = b"\\TransactionManager\\\\\x00";
+pub const TRANSACTION_OBJECT_PATH: &'static [u8; 15usize] = b"\\Transaction\\\\\x00";
+pub const ENLISTMENT_OBJECT_PATH: &'static [u8; 14usize] = b"\\Enlistment\\\\\x00";
+pub const RESOURCE_MANAGER_OBJECT_PATH: &'static [u8; 19usize] = b"\\ResourceManager\\\\\x00";
+pub const TRANSACTION_NOTIFICATION_TM_ONLINE_FLAG_IS_CLUSTERED: libc::c_uint = 1;
 pub const KTM_MARSHAL_BLOB_VERSION_MAJOR: libc::c_uint = 1;
 pub const KTM_MARSHAL_BLOB_VERSION_MINOR: libc::c_uint = 1;
 pub const MAX_TRANSACTION_DESCRIPTION_LENGTH: libc::c_uint = 64;
@@ -1855,9 +1854,7 @@ pub const LTP_PC_SMT: libc::c_uint = 1;
 pub const CACHE_FULLY_ASSOCIATIVE: libc::c_uint = 255;
 pub const SYSTEM_CPU_SET_INFORMATION_PARKED: libc::c_uint = 1;
 pub const SYSTEM_CPU_SET_INFORMATION_ALLOCATED: libc::c_uint = 2;
-pub const SYSTEM_CPU_SET_INFORMATION_ALLOCATED_TO_TARGET_PROCESS: libc::c_uint
-          =
-    4;
+pub const SYSTEM_CPU_SET_INFORMATION_ALLOCATED_TO_TARGET_PROCESS: libc::c_uint = 4;
 pub const PF_FLOATING_POINT_PRECISION_ERRATA: libc::c_uint = 0;
 pub const PF_FLOATING_POINT_EMULATED: libc::c_uint = 1;
 pub const PF_COMPARE_EXCHANGE_DOUBLE: libc::c_uint = 2;
@@ -1907,12 +1904,10 @@ pub const KB_SECONDARY_DATA_FLAG_ADDITIONAL_DATA: libc::c_uint = 1;
 pub const KB_SECONDARY_DATA_FLAG_NO_DEVICE_ACCESS: libc::c_uint = 2;
 pub const KB_ADD_PAGES_FLAG_VIRTUAL_ADDRESS: libc::c_uint = 1;
 pub const KB_ADD_PAGES_FLAG_PHYSICAL_ADDRESS: libc::c_uint = 2;
-pub const KB_ADD_PAGES_FLAG_ADDITIONAL_RANGES_EXIST: libc::c_uint =
-    2147483648;
+pub const KB_ADD_PAGES_FLAG_ADDITIONAL_RANGES_EXIST: libc::c_uint = 2147483648;
 pub const KB_REMOVE_PAGES_FLAG_VIRTUAL_ADDRESS: libc::c_uint = 1;
 pub const KB_REMOVE_PAGES_FLAG_PHYSICAL_ADDRESS: libc::c_uint = 2;
-pub const KB_REMOVE_PAGES_FLAG_ADDITIONAL_RANGES_EXIST: libc::c_uint =
-    2147483648;
+pub const KB_REMOVE_PAGES_FLAG_ADDITIONAL_RANGES_EXIST: libc::c_uint = 2147483648;
 pub const EXCEPTION_DIVIDED_BY_ZERO: libc::c_uint = 0;
 pub const EXCEPTION_DEBUG: libc::c_uint = 1;
 pub const EXCEPTION_NMI: libc::c_uint = 2;
@@ -2238,9 +2233,7 @@ pub const PLUGPLAY_REGKEY_DEVICE: libc::c_uint = 1;
 pub const PLUGPLAY_REGKEY_DRIVER: libc::c_uint = 2;
 pub const PLUGPLAY_REGKEY_CURRENT_HWPROFILE: libc::c_uint = 4;
 pub const DEVICE_INTERFACE_INCLUDE_NONACTIVE: libc::c_uint = 1;
-pub const PNPNOTIFY_DEVICE_INTERFACE_INCLUDE_EXISTING_INTERFACES: libc::c_uint
-          =
-    1;
+pub const PNPNOTIFY_DEVICE_INTERFACE_INCLUDE_EXISTING_INTERFACES: libc::c_uint = 1;
 pub const DEVPROP_TYPEMOD_ARRAY: libc::c_uint = 4096;
 pub const DEVPROP_TYPEMOD_LIST: libc::c_uint = 8192;
 pub const DEVPROP_TYPE_EMPTY: libc::c_uint = 0;
@@ -2392,15 +2385,12 @@ pub const PCI_EXPRESS_DEVICE_SERIAL_NUMBER_CAP_ID: libc::c_uint = 3;
 pub const PCI_EXPRESS_POWER_BUDGETING_CAP_ID: libc::c_uint = 4;
 pub const PCI_EXPRESS_RC_LINK_DECLARATION_CAP_ID: libc::c_uint = 5;
 pub const PCI_EXPRESS_RC_INTERNAL_LINK_CONTROL_CAP_ID: libc::c_uint = 6;
-pub const PCI_EXPRESS_RC_EVENT_COLLECTOR_ENDPOINT_ASSOCIATION_CAP_ID:
-          libc::c_uint =
-    7;
+pub const PCI_EXPRESS_RC_EVENT_COLLECTOR_ENDPOINT_ASSOCIATION_CAP_ID: libc::c_uint = 7;
 pub const PCI_EXPRESS_MFVC_CAP_ID: libc::c_uint = 8;
 pub const PCI_EXPRESS_VC_AND_MFVC_CAP_ID: libc::c_uint = 9;
 pub const PCI_EXPRESS_RCRB_HEADER_CAP_ID: libc::c_uint = 10;
 pub const PCI_EXPRESS_VENDOR_SPECIFIC_CAP_ID: libc::c_uint = 11;
-pub const PCI_EXPRESS_CONFIGURATION_ACCESS_CORRELATION_CAP_ID: libc::c_uint =
-    12;
+pub const PCI_EXPRESS_CONFIGURATION_ACCESS_CORRELATION_CAP_ID: libc::c_uint = 12;
 pub const PCI_EXPRESS_ACCESS_CONTROL_SERVICES_CAP_ID: libc::c_uint = 13;
 pub const PCI_EXPRESS_ARI_CAP_ID: libc::c_uint = 14;
 pub const PCI_EXPRESS_ATS_CAP_ID: libc::c_uint = 15;
@@ -2572,8 +2562,7 @@ pub const ClfsDataRecord: libc::c_uint = 1;
 pub const ClfsRestartRecord: libc::c_uint = 2;
 pub const ClfsClientRecord: libc::c_uint = 3;
 pub const CLFS_CONTAINER_STREAM_PREFIX: &'static [u8; 7usize] = b"%BLF%:\x00";
-pub const CLFS_CONTAINER_RELATIVE_PREFIX: &'static [u8; 8usize] =
-    b"%BLF%\\\\\x00";
+pub const CLFS_CONTAINER_RELATIVE_PREFIX: &'static [u8; 8usize] = b"%BLF%\\\\\x00";
 pub const ClsContainerInitializing: libc::c_uint = 1;
 pub const ClsContainerInactive: libc::c_uint = 2;
 pub const ClsContainerActive: libc::c_uint = 4;
@@ -2642,19 +2631,12 @@ pub const RTL_RUN_ONCE_INIT_FAILED: libc::c_uint = 4;
 pub const RTL_RUN_ONCE_CTX_RESERVED_BITS: libc::c_uint = 2;
 pub const RTL_HASH_ALLOCATED_HEADER: libc::c_uint = 1;
 pub const RTL_HASH_RESERVED_SIGNATURE: libc::c_uint = 0;
-pub const FILE_CHARACTERISTICS_EXPECT_ORDERLY_REMOVAL_EX: libc::c_uint =
-    16384;
-pub const FILE_CHARACTERISTICS_EXPECT_SURPRISE_REMOVAL_EX: libc::c_uint =
-    32768;
+pub const FILE_CHARACTERISTICS_EXPECT_ORDERLY_REMOVAL_EX: libc::c_uint = 16384;
+pub const FILE_CHARACTERISTICS_EXPECT_SURPRISE_REMOVAL_EX: libc::c_uint = 32768;
 pub const FILE_CHARACTERISTICS_REMOVAL_POLICY_MASK_EX: libc::c_uint = 49152;
-pub const FILE_CHARACTERISTICS_EXPECT_ORDERLY_REMOVAL_DEPRECATED: libc::c_uint
-          =
-    512;
-pub const FILE_CHARACTERISTICS_EXPECT_SURPRISE_REMOVAL_DEPRECATED:
-          libc::c_uint =
-    768;
-pub const FILE_CHARACTERISTICS_REMOVAL_POLICY_MASK_DEPRECATED: libc::c_uint =
-    768;
+pub const FILE_CHARACTERISTICS_EXPECT_ORDERLY_REMOVAL_DEPRECATED: libc::c_uint = 512;
+pub const FILE_CHARACTERISTICS_EXPECT_SURPRISE_REMOVAL_DEPRECATED: libc::c_uint = 768;
+pub const FILE_CHARACTERISTICS_REMOVAL_POLICY_MASK_DEPRECATED: libc::c_uint = 768;
 pub const FILE_CHARACTERISTICS_PROPAGATED: libc::c_uint = 327951;
 pub const FILE_DISPOSITION_DO_NOT_DELETE: libc::c_uint = 0;
 pub const FILE_DISPOSITION_DELETE: libc::c_uint = 1;
@@ -2677,12 +2659,8 @@ pub const MEMORY_PRIORITY_BELOW_NORMAL: libc::c_uint = 4;
 pub const MEMORY_PRIORITY_NORMAL: libc::c_uint = 5;
 pub const PROCESS_LUID_DOSDEVICES_ONLY: libc::c_uint = 1;
 pub const PROCESS_HANDLE_EXCEPTIONS_ENABLED: libc::c_uint = 1;
-pub const PROCESS_HANDLE_RAISE_UM_EXCEPTION_ON_INVALID_HANDLE_CLOSE_DISABLED:
-          libc::c_uint =
-    0;
-pub const PROCESS_HANDLE_RAISE_UM_EXCEPTION_ON_INVALID_HANDLE_CLOSE_ENABLED:
-          libc::c_uint =
-    1;
+pub const PROCESS_HANDLE_RAISE_UM_EXCEPTION_ON_INVALID_HANDLE_CLOSE_DISABLED: libc::c_uint = 0;
+pub const PROCESS_HANDLE_RAISE_UM_EXCEPTION_ON_INVALID_HANDLE_CLOSE_ENABLED: libc::c_uint = 1;
 pub const PROCESS_HANDLE_TRACING_MAX_STACKS: libc::c_uint = 16;
 pub const QUOTA_LIMITS_HARDWS_MIN_ENABLE: libc::c_uint = 1;
 pub const QUOTA_LIMITS_HARDWS_MIN_DISABLE: libc::c_uint = 2;
@@ -3094,11 +3072,13 @@ pub struct _EXCEPTION_RECORD {
 }
 #[test]
 fn bindgen_test_layout__EXCEPTION_RECORD() {
-    assert_eq!(::core::mem::size_of::<_EXCEPTION_RECORD>() , 152usize);
-    assert_eq!(::core::mem::align_of::<_EXCEPTION_RECORD>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_EXCEPTION_RECORD>(), 152usize);
+    assert_eq!(::core::mem::align_of::<_EXCEPTION_RECORD>(), 8usize);
 }
 impl Clone for _EXCEPTION_RECORD {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 pub struct _CONTEXT {
@@ -3134,14 +3114,16 @@ pub struct _DISPATCHER_CONTEXT {
     pub _address: u8,
 }
 impl Clone for _DISPATCHER_CONTEXT {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 extern "C" {
     pub fn __C_specific_handler(ExceptionRecord: *mut _EXCEPTION_RECORD,
                                 EstablisherFrame: *mut libc::c_void,
                                 ContextRecord: *mut _CONTEXT,
                                 DispatcherContext: *mut _DISPATCHER_CONTEXT)
-     -> EXCEPTION_DISPOSITION;
+                                -> EXCEPTION_DISPOSITION;
 }
 extern "C" {
     pub fn _exception_code() -> libc::c_ulong;
@@ -3160,8 +3142,10 @@ extern "C" {
     pub fn _invalid_parameter_noinfo_noreturn();
 }
 extern "C" {
-    pub fn _invoke_watson(arg1: *const wchar_t, arg2: *const wchar_t,
-                          arg3: *const wchar_t, arg4: libc::c_uint,
+    pub fn _invoke_watson(arg1: *const wchar_t,
+                          arg2: *const wchar_t,
+                          arg3: *const wchar_t,
+                          arg4: libc::c_uint,
                           arg5: usize);
 }
 pub type errno_t = libc::c_int;
@@ -3177,7 +3161,9 @@ pub struct __crt_locale_data_public {
     pub _locale_lc_codepage: libc::c_uint,
 }
 impl Clone for __crt_locale_data_public {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -3191,7 +3177,9 @@ pub struct __crt_locale_pointers___crt_locale_data {
     pub _address: u8,
 }
 impl Clone for __crt_locale_pointers___crt_locale_data {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -3199,10 +3187,14 @@ pub struct __crt_locale_pointers___crt_multibyte_data {
     pub _address: u8,
 }
 impl Clone for __crt_locale_pointers___crt_multibyte_data {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl Clone for __crt_locale_pointers {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type _locale_t = *mut __crt_locale_pointers;
 #[repr(C)]
@@ -3213,7 +3205,9 @@ pub struct _Mbstatet {
     pub _State: libc::c_ushort,
 }
 impl Clone for _Mbstatet {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_Mbstatet as mbstate_t;
 pub type time_t = __time64_t;
@@ -3321,8 +3315,7 @@ extern "C" {
     pub fn _towlower_l(_C: wint_t, _Locale: _locale_t) -> wint_t;
 }
 extern "C" {
-    pub fn _iswctype_l(_C: wint_t, _Type: wctype_t, _Locale: _locale_t)
-     -> libc::c_int;
+    pub fn _iswctype_l(_C: wint_t, _Type: wctype_t, _Locale: _locale_t) -> libc::c_int;
 }
 extern "C" {
     pub fn isleadbyte(_C: libc::c_int) -> libc::c_int;
@@ -3337,8 +3330,7 @@ extern "C" {
     pub fn _isctype(_C: libc::c_int, _Type: libc::c_int) -> libc::c_int;
 }
 extern "C" {
-    pub fn _isctype_l(_C: libc::c_int, _Type: libc::c_int, _Locale: _locale_t)
-     -> libc::c_int;
+    pub fn _isctype_l(_C: libc::c_int, _Type: libc::c_int, _Locale: _locale_t) -> libc::c_int;
 }
 extern "C" {
     pub fn isalpha(_C: libc::c_int) -> libc::c_int;
@@ -3583,19 +3575,23 @@ pub struct _QUAD__bindgen_ty_1 {
 }
 #[test]
 fn bindgen_test_layout__QUAD__bindgen_ty_1() {
-    assert_eq!(::core::mem::size_of::<_QUAD__bindgen_ty_1>() , 8usize);
-    assert_eq!(::core::mem::align_of::<_QUAD__bindgen_ty_1>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_QUAD__bindgen_ty_1>(), 8usize);
+    assert_eq!(::core::mem::align_of::<_QUAD__bindgen_ty_1>(), 8usize);
 }
 impl Clone for _QUAD__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[test]
 fn bindgen_test_layout__QUAD() {
-    assert_eq!(::core::mem::size_of::<_QUAD>() , 8usize);
-    assert_eq!(::core::mem::align_of::<_QUAD>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_QUAD>(), 8usize);
+    assert_eq!(::core::mem::align_of::<_QUAD>(), 8usize);
 }
 impl Clone for _QUAD {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_QUAD as QUAD;
 pub type PSHORT = *mut SHORT;
@@ -3620,11 +3616,13 @@ pub struct _PROCESSOR_NUMBER {
 }
 #[test]
 fn bindgen_test_layout__PROCESSOR_NUMBER() {
-    assert_eq!(::core::mem::size_of::<_PROCESSOR_NUMBER>() , 4usize);
-    assert_eq!(::core::mem::align_of::<_PROCESSOR_NUMBER>() , 2usize);
+    assert_eq!(::core::mem::size_of::<_PROCESSOR_NUMBER>(), 4usize);
+    assert_eq!(::core::mem::align_of::<_PROCESSOR_NUMBER>(), 2usize);
 }
 impl Clone for _PROCESSOR_NUMBER {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_PROCESSOR_NUMBER as PROCESSOR_NUMBER;
 pub type PPROCESSOR_NUMBER = *mut _PROCESSOR_NUMBER;
@@ -3637,11 +3635,13 @@ pub struct _GROUP_AFFINITY {
 }
 #[test]
 fn bindgen_test_layout__GROUP_AFFINITY() {
-    assert_eq!(::core::mem::size_of::<_GROUP_AFFINITY>() , 16usize);
-    assert_eq!(::core::mem::align_of::<_GROUP_AFFINITY>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_GROUP_AFFINITY>(), 16usize);
+    assert_eq!(::core::mem::align_of::<_GROUP_AFFINITY>(), 8usize);
 }
 impl Clone for _GROUP_AFFINITY {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_GROUP_AFFINITY as GROUP_AFFINITY;
 pub type PGROUP_AFFINITY = *mut _GROUP_AFFINITY;
@@ -3660,10 +3660,8 @@ pub type PCLONG = *mut CLONG;
 pub type LCID = ULONG;
 pub type PLCID = PULONG;
 pub type LANGID = USHORT;
-pub const UNSPECIFIED_COMPARTMENT_ID: _bindgen_ty_1 =
-    _bindgen_ty_1::UNSPECIFIED_COMPARTMENT_ID;
-pub const DEFAULT_COMPARTMENT_ID: _bindgen_ty_1 =
-    _bindgen_ty_1::DEFAULT_COMPARTMENT_ID;
+pub const UNSPECIFIED_COMPARTMENT_ID: _bindgen_ty_1 = _bindgen_ty_1::UNSPECIFIED_COMPARTMENT_ID;
+pub const DEFAULT_COMPARTMENT_ID: _bindgen_ty_1 = _bindgen_ty_1::DEFAULT_COMPARTMENT_ID;
 #[repr(i32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub enum _bindgen_ty_1 {
@@ -3685,11 +3683,13 @@ pub struct _FLOAT128 {
 }
 #[test]
 fn bindgen_test_layout__FLOAT128() {
-    assert_eq!(::core::mem::size_of::<_FLOAT128>() , 16usize);
-    assert_eq!(::core::mem::align_of::<_FLOAT128>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_FLOAT128>(), 16usize);
+    assert_eq!(::core::mem::align_of::<_FLOAT128>(), 8usize);
 }
 impl Clone for _FLOAT128 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_FLOAT128 as FLOAT128;
 pub type PFLOAT128 = *mut FLOAT128;
@@ -3714,13 +3714,15 @@ pub struct _LARGE_INTEGER__bindgen_ty_1 {
 }
 #[test]
 fn bindgen_test_layout__LARGE_INTEGER__bindgen_ty_1() {
-    assert_eq!(::core::mem::size_of::<_LARGE_INTEGER__bindgen_ty_1>() ,
+    assert_eq!(::core::mem::size_of::<_LARGE_INTEGER__bindgen_ty_1>(),
                8usize);
-    assert_eq!(::core::mem::align_of::<_LARGE_INTEGER__bindgen_ty_1>() ,
+    assert_eq!(::core::mem::align_of::<_LARGE_INTEGER__bindgen_ty_1>(),
                4usize);
 }
 impl Clone for _LARGE_INTEGER__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -3730,21 +3732,25 @@ pub struct _LARGE_INTEGER__bindgen_ty_2 {
 }
 #[test]
 fn bindgen_test_layout__LARGE_INTEGER__bindgen_ty_2() {
-    assert_eq!(::core::mem::size_of::<_LARGE_INTEGER__bindgen_ty_2>() ,
+    assert_eq!(::core::mem::size_of::<_LARGE_INTEGER__bindgen_ty_2>(),
                8usize);
-    assert_eq!(::core::mem::align_of::<_LARGE_INTEGER__bindgen_ty_2>() ,
+    assert_eq!(::core::mem::align_of::<_LARGE_INTEGER__bindgen_ty_2>(),
                4usize);
 }
 impl Clone for _LARGE_INTEGER__bindgen_ty_2 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[test]
 fn bindgen_test_layout__LARGE_INTEGER() {
-    assert_eq!(::core::mem::size_of::<_LARGE_INTEGER>() , 8usize);
-    assert_eq!(::core::mem::align_of::<_LARGE_INTEGER>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_LARGE_INTEGER>(), 8usize);
+    assert_eq!(::core::mem::align_of::<_LARGE_INTEGER>(), 8usize);
 }
 impl Clone for _LARGE_INTEGER {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_LARGE_INTEGER as LARGE_INTEGER;
 pub type PLARGE_INTEGER = *mut LARGE_INTEGER;
@@ -3764,13 +3770,15 @@ pub struct _ULARGE_INTEGER__bindgen_ty_1 {
 }
 #[test]
 fn bindgen_test_layout__ULARGE_INTEGER__bindgen_ty_1() {
-    assert_eq!(::core::mem::size_of::<_ULARGE_INTEGER__bindgen_ty_1>() ,
+    assert_eq!(::core::mem::size_of::<_ULARGE_INTEGER__bindgen_ty_1>(),
                8usize);
-    assert_eq!(::core::mem::align_of::<_ULARGE_INTEGER__bindgen_ty_1>() ,
+    assert_eq!(::core::mem::align_of::<_ULARGE_INTEGER__bindgen_ty_1>(),
                4usize);
 }
 impl Clone for _ULARGE_INTEGER__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -3780,21 +3788,25 @@ pub struct _ULARGE_INTEGER__bindgen_ty_2 {
 }
 #[test]
 fn bindgen_test_layout__ULARGE_INTEGER__bindgen_ty_2() {
-    assert_eq!(::core::mem::size_of::<_ULARGE_INTEGER__bindgen_ty_2>() ,
+    assert_eq!(::core::mem::size_of::<_ULARGE_INTEGER__bindgen_ty_2>(),
                8usize);
-    assert_eq!(::core::mem::align_of::<_ULARGE_INTEGER__bindgen_ty_2>() ,
+    assert_eq!(::core::mem::align_of::<_ULARGE_INTEGER__bindgen_ty_2>(),
                4usize);
 }
 impl Clone for _ULARGE_INTEGER__bindgen_ty_2 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[test]
 fn bindgen_test_layout__ULARGE_INTEGER() {
-    assert_eq!(::core::mem::size_of::<_ULARGE_INTEGER>() , 8usize);
-    assert_eq!(::core::mem::align_of::<_ULARGE_INTEGER>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_ULARGE_INTEGER>(), 8usize);
+    assert_eq!(::core::mem::align_of::<_ULARGE_INTEGER>(), 8usize);
 }
 impl Clone for _ULARGE_INTEGER {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_ULARGE_INTEGER as ULARGE_INTEGER;
 pub type PULARGE_INTEGER = *mut ULARGE_INTEGER;
@@ -3808,11 +3820,13 @@ pub struct _LUID {
 }
 #[test]
 fn bindgen_test_layout__LUID() {
-    assert_eq!(::core::mem::size_of::<_LUID>() , 8usize);
-    assert_eq!(::core::mem::align_of::<_LUID>() , 4usize);
+    assert_eq!(::core::mem::size_of::<_LUID>(), 8usize);
+    assert_eq!(::core::mem::align_of::<_LUID>(), 4usize);
 }
 impl Clone for _LUID {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_LUID as LUID;
 pub type PLUID = *mut _LUID;
@@ -3821,42 +3835,42 @@ pub type PDWORDLONG = *mut DWORDLONG;
 pub use self::LARGE_INTEGER as PHYSICAL_ADDRESS;
 pub type PPHYSICAL_ADDRESS = *mut LARGE_INTEGER;
 extern "C" {
-    pub fn _rotl8(Value: libc::c_uchar, Shift: libc::c_uchar)
-     -> libc::c_uchar;
+    pub fn _rotl8(Value: libc::c_uchar, Shift: libc::c_uchar) -> libc::c_uchar;
 }
 extern "C" {
-    pub fn _rotl16(Value: libc::c_ushort, Shift: libc::c_uchar)
-     -> libc::c_ushort;
+    pub fn _rotl16(Value: libc::c_ushort, Shift: libc::c_uchar) -> libc::c_ushort;
 }
 extern "C" {
-    pub fn _rotr8(Value: libc::c_uchar, Shift: libc::c_uchar)
-     -> libc::c_uchar;
+    pub fn _rotr8(Value: libc::c_uchar, Shift: libc::c_uchar) -> libc::c_uchar;
 }
 extern "C" {
-    pub fn _rotr16(Value: libc::c_ushort, Shift: libc::c_uchar)
-     -> libc::c_ushort;
+    pub fn _rotr16(Value: libc::c_ushort, Shift: libc::c_uchar) -> libc::c_ushort;
 }
 extern "C" {
     pub fn _rotl(Value: libc::c_uint, Shift: libc::c_int) -> libc::c_uint;
 }
 extern "C" {
-    pub fn _rotl64(Value: libc::c_ulonglong, Shift: libc::c_int)
-     -> libc::c_ulonglong;
+    pub fn _rotl64(Value: libc::c_ulonglong, Shift: libc::c_int) -> libc::c_ulonglong;
 }
 extern "C" {
     pub fn _rotr(Value: libc::c_uint, Shift: libc::c_int) -> libc::c_uint;
 }
 extern "C" {
-    pub fn _rotr64(Value: libc::c_ulonglong, Shift: libc::c_int)
-     -> libc::c_ulonglong;
+    pub fn _rotr64(Value: libc::c_ulonglong, Shift: libc::c_int) -> libc::c_ulonglong;
 }
 #[repr(i32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum _EVENT_TYPE { NotificationEvent = 0, SynchronizationEvent = 1, }
+pub enum _EVENT_TYPE {
+    NotificationEvent = 0,
+    SynchronizationEvent = 1,
+}
 pub use self::_EVENT_TYPE as EVENT_TYPE;
 #[repr(i32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum _TIMER_TYPE { NotificationTimer = 0, SynchronizationTimer = 1, }
+pub enum _TIMER_TYPE {
+    NotificationTimer = 0,
+    SynchronizationTimer = 1,
+}
 pub use self::_TIMER_TYPE as TIMER_TYPE;
 #[repr(i32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -3879,11 +3893,13 @@ pub struct _STRING {
 }
 #[test]
 fn bindgen_test_layout__STRING() {
-    assert_eq!(::core::mem::size_of::<_STRING>() , 16usize);
-    assert_eq!(::core::mem::align_of::<_STRING>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_STRING>(), 16usize);
+    assert_eq!(::core::mem::align_of::<_STRING>(), 8usize);
 }
 impl Clone for _STRING {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_STRING as STRING;
 pub type PSTRING = *mut STRING;
@@ -3901,11 +3917,13 @@ pub struct _CSTRING {
 }
 #[test]
 fn bindgen_test_layout__CSTRING() {
-    assert_eq!(::core::mem::size_of::<_CSTRING>() , 16usize);
-    assert_eq!(::core::mem::align_of::<_CSTRING>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_CSTRING>(), 16usize);
+    assert_eq!(::core::mem::align_of::<_CSTRING>(), 8usize);
 }
 impl Clone for _CSTRING {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_CSTRING as CSTRING;
 pub type PCSTRING = *mut CSTRING;
@@ -3920,11 +3938,13 @@ pub struct _UNICODE_STRING {
 }
 #[test]
 fn bindgen_test_layout__UNICODE_STRING() {
-    assert_eq!(::core::mem::size_of::<_UNICODE_STRING>() , 16usize);
-    assert_eq!(::core::mem::align_of::<_UNICODE_STRING>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_UNICODE_STRING>(), 16usize);
+    assert_eq!(::core::mem::align_of::<_UNICODE_STRING>(), 8usize);
 }
 impl Clone for _UNICODE_STRING {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_UNICODE_STRING as UNICODE_STRING;
 pub type PUNICODE_STRING = *mut UNICODE_STRING;
@@ -3939,11 +3959,13 @@ pub struct _LIST_ENTRY {
 }
 #[test]
 fn bindgen_test_layout__LIST_ENTRY() {
-    assert_eq!(::core::mem::size_of::<_LIST_ENTRY>() , 16usize);
-    assert_eq!(::core::mem::align_of::<_LIST_ENTRY>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_LIST_ENTRY>(), 16usize);
+    assert_eq!(::core::mem::align_of::<_LIST_ENTRY>(), 8usize);
 }
 impl Clone for _LIST_ENTRY {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_LIST_ENTRY as LIST_ENTRY;
 pub type PLIST_ENTRY = *mut _LIST_ENTRY;
@@ -3955,11 +3977,13 @@ pub struct _SINGLE_LIST_ENTRY {
 }
 #[test]
 fn bindgen_test_layout__SINGLE_LIST_ENTRY() {
-    assert_eq!(::core::mem::size_of::<_SINGLE_LIST_ENTRY>() , 8usize);
-    assert_eq!(::core::mem::align_of::<_SINGLE_LIST_ENTRY>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_SINGLE_LIST_ENTRY>(), 8usize);
+    assert_eq!(::core::mem::align_of::<_SINGLE_LIST_ENTRY>(), 8usize);
 }
 impl Clone for _SINGLE_LIST_ENTRY {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_SINGLE_LIST_ENTRY as SINGLE_LIST_ENTRY;
 pub type PSINGLE_LIST_ENTRY = *mut _SINGLE_LIST_ENTRY;
@@ -3984,23 +4008,27 @@ pub struct _RTL_BALANCED_NODE__bindgen_ty_1__bindgen_ty_1 {
 }
 #[test]
 fn bindgen_test_layout__RTL_BALANCED_NODE__bindgen_ty_1__bindgen_ty_1() {
-    assert_eq!(::core::mem::size_of::<_RTL_BALANCED_NODE__bindgen_ty_1__bindgen_ty_1>()
-               , 16usize);
-    assert_eq!(::core::mem::align_of::<_RTL_BALANCED_NODE__bindgen_ty_1__bindgen_ty_1>()
-               , 8usize);
+    assert_eq!(::core::mem::size_of::<_RTL_BALANCED_NODE__bindgen_ty_1__bindgen_ty_1>(),
+               16usize);
+    assert_eq!(::core::mem::align_of::<_RTL_BALANCED_NODE__bindgen_ty_1__bindgen_ty_1>(),
+               8usize);
 }
 impl Clone for _RTL_BALANCED_NODE__bindgen_ty_1__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[test]
 fn bindgen_test_layout__RTL_BALANCED_NODE__bindgen_ty_1() {
-    assert_eq!(::core::mem::size_of::<_RTL_BALANCED_NODE__bindgen_ty_1>() ,
+    assert_eq!(::core::mem::size_of::<_RTL_BALANCED_NODE__bindgen_ty_1>(),
                16usize);
-    assert_eq!(::core::mem::align_of::<_RTL_BALANCED_NODE__bindgen_ty_1>() ,
+    assert_eq!(::core::mem::align_of::<_RTL_BALANCED_NODE__bindgen_ty_1>(),
                8usize);
 }
 impl Clone for _RTL_BALANCED_NODE__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -4011,21 +4039,20 @@ pub struct _RTL_BALANCED_NODE__bindgen_ty_2 {
 }
 #[test]
 fn bindgen_test_layout__RTL_BALANCED_NODE__bindgen_ty_2() {
-    assert_eq!(::core::mem::size_of::<_RTL_BALANCED_NODE__bindgen_ty_2>() ,
+    assert_eq!(::core::mem::size_of::<_RTL_BALANCED_NODE__bindgen_ty_2>(),
                8usize);
-    assert_eq!(::core::mem::align_of::<_RTL_BALANCED_NODE__bindgen_ty_2>() ,
+    assert_eq!(::core::mem::align_of::<_RTL_BALANCED_NODE__bindgen_ty_2>(),
                8usize);
 }
 impl Clone for _RTL_BALANCED_NODE__bindgen_ty_2 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl _RTL_BALANCED_NODE__bindgen_ty_2 {
     #[inline]
     pub fn Red(&self) -> UCHAR {
-        unsafe {
-            ::core::mem::transmute(((self._bitfield_1 & (1usize as u8)) >>
-                                        0u32) as u8)
-        }
+        unsafe { ::core::mem::transmute(((self._bitfield_1 & (1usize as u8)) >> 0u32) as u8) }
     }
     #[inline]
     pub fn set_Red(&mut self, val: UCHAR) {
@@ -4034,10 +4061,7 @@ impl _RTL_BALANCED_NODE__bindgen_ty_2 {
     }
     #[inline]
     pub fn Balance(&self) -> UCHAR {
-        unsafe {
-            ::core::mem::transmute(((self._bitfield_1 & (6usize as u8)) >>
-                                        1u32) as u8)
-        }
+        unsafe { ::core::mem::transmute(((self._bitfield_1 & (6usize as u8)) >> 1u32) as u8) }
     }
     #[inline]
     pub fn set_Balance(&mut self, val: UCHAR) {
@@ -4047,11 +4071,13 @@ impl _RTL_BALANCED_NODE__bindgen_ty_2 {
 }
 #[test]
 fn bindgen_test_layout__RTL_BALANCED_NODE() {
-    assert_eq!(::core::mem::size_of::<_RTL_BALANCED_NODE>() , 24usize);
-    assert_eq!(::core::mem::align_of::<_RTL_BALANCED_NODE>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_RTL_BALANCED_NODE>(), 24usize);
+    assert_eq!(::core::mem::align_of::<_RTL_BALANCED_NODE>(), 8usize);
 }
 impl Clone for _RTL_BALANCED_NODE {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_RTL_BALANCED_NODE as RTL_BALANCED_NODE;
 pub type PRTL_BALANCED_NODE = *mut _RTL_BALANCED_NODE;
@@ -4063,11 +4089,13 @@ pub struct LIST_ENTRY32 {
 }
 #[test]
 fn bindgen_test_layout_LIST_ENTRY32() {
-    assert_eq!(::core::mem::size_of::<LIST_ENTRY32>() , 8usize);
-    assert_eq!(::core::mem::align_of::<LIST_ENTRY32>() , 4usize);
+    assert_eq!(::core::mem::size_of::<LIST_ENTRY32>(), 8usize);
+    assert_eq!(::core::mem::align_of::<LIST_ENTRY32>(), 4usize);
 }
 impl Clone for LIST_ENTRY32 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type PLIST_ENTRY32 = *mut LIST_ENTRY32;
 #[repr(C)]
@@ -4078,11 +4106,13 @@ pub struct LIST_ENTRY64 {
 }
 #[test]
 fn bindgen_test_layout_LIST_ENTRY64() {
-    assert_eq!(::core::mem::size_of::<LIST_ENTRY64>() , 16usize);
-    assert_eq!(::core::mem::align_of::<LIST_ENTRY64>() , 8usize);
+    assert_eq!(::core::mem::size_of::<LIST_ENTRY64>(), 16usize);
+    assert_eq!(::core::mem::align_of::<LIST_ENTRY64>(), 8usize);
 }
 impl Clone for LIST_ENTRY64 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type PLIST_ENTRY64 = *mut LIST_ENTRY64;
 #[repr(C)]
@@ -4092,11 +4122,13 @@ pub struct _SINGLE_LIST_ENTRY32 {
 }
 #[test]
 fn bindgen_test_layout__SINGLE_LIST_ENTRY32() {
-    assert_eq!(::core::mem::size_of::<_SINGLE_LIST_ENTRY32>() , 4usize);
-    assert_eq!(::core::mem::align_of::<_SINGLE_LIST_ENTRY32>() , 4usize);
+    assert_eq!(::core::mem::size_of::<_SINGLE_LIST_ENTRY32>(), 4usize);
+    assert_eq!(::core::mem::align_of::<_SINGLE_LIST_ENTRY32>(), 4usize);
 }
 impl Clone for _SINGLE_LIST_ENTRY32 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_SINGLE_LIST_ENTRY32 as SINGLE_LIST_ENTRY32;
 pub type PSINGLE_LIST_ENTRY32 = *mut _SINGLE_LIST_ENTRY32;
@@ -4109,11 +4141,13 @@ pub struct _STRING32 {
 }
 #[test]
 fn bindgen_test_layout__STRING32() {
-    assert_eq!(::core::mem::size_of::<_STRING32>() , 8usize);
-    assert_eq!(::core::mem::align_of::<_STRING32>() , 4usize);
+    assert_eq!(::core::mem::size_of::<_STRING32>(), 8usize);
+    assert_eq!(::core::mem::align_of::<_STRING32>(), 4usize);
 }
 impl Clone for _STRING32 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_STRING32 as STRING32;
 pub type PSTRING32 = *mut STRING32;
@@ -4130,11 +4164,13 @@ pub struct _STRING64 {
 }
 #[test]
 fn bindgen_test_layout__STRING64() {
-    assert_eq!(::core::mem::size_of::<_STRING64>() , 16usize);
-    assert_eq!(::core::mem::align_of::<_STRING64>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_STRING64>(), 16usize);
+    assert_eq!(::core::mem::align_of::<_STRING64>(), 8usize);
 }
 impl Clone for _STRING64 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_STRING64 as STRING64;
 pub type PSTRING64 = *mut STRING64;
@@ -4154,11 +4190,13 @@ pub struct _OBJECT_ATTRIBUTES64 {
 }
 #[test]
 fn bindgen_test_layout__OBJECT_ATTRIBUTES64() {
-    assert_eq!(::core::mem::size_of::<_OBJECT_ATTRIBUTES64>() , 48usize);
-    assert_eq!(::core::mem::align_of::<_OBJECT_ATTRIBUTES64>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_OBJECT_ATTRIBUTES64>(), 48usize);
+    assert_eq!(::core::mem::align_of::<_OBJECT_ATTRIBUTES64>(), 8usize);
 }
 impl Clone for _OBJECT_ATTRIBUTES64 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_OBJECT_ATTRIBUTES64 as OBJECT_ATTRIBUTES64;
 pub type POBJECT_ATTRIBUTES64 = *mut OBJECT_ATTRIBUTES64;
@@ -4175,11 +4213,13 @@ pub struct _OBJECT_ATTRIBUTES32 {
 }
 #[test]
 fn bindgen_test_layout__OBJECT_ATTRIBUTES32() {
-    assert_eq!(::core::mem::size_of::<_OBJECT_ATTRIBUTES32>() , 24usize);
-    assert_eq!(::core::mem::align_of::<_OBJECT_ATTRIBUTES32>() , 4usize);
+    assert_eq!(::core::mem::size_of::<_OBJECT_ATTRIBUTES32>(), 24usize);
+    assert_eq!(::core::mem::align_of::<_OBJECT_ATTRIBUTES32>(), 4usize);
 }
 impl Clone for _OBJECT_ATTRIBUTES32 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_OBJECT_ATTRIBUTES32 as OBJECT_ATTRIBUTES32;
 pub type POBJECT_ATTRIBUTES32 = *mut OBJECT_ATTRIBUTES32;
@@ -4196,11 +4236,13 @@ pub struct _OBJECT_ATTRIBUTES {
 }
 #[test]
 fn bindgen_test_layout__OBJECT_ATTRIBUTES() {
-    assert_eq!(::core::mem::size_of::<_OBJECT_ATTRIBUTES>() , 48usize);
-    assert_eq!(::core::mem::align_of::<_OBJECT_ATTRIBUTES>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_OBJECT_ATTRIBUTES>(), 48usize);
+    assert_eq!(::core::mem::align_of::<_OBJECT_ATTRIBUTES>(), 8usize);
 }
 impl Clone for _OBJECT_ATTRIBUTES {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_OBJECT_ATTRIBUTES as OBJECT_ATTRIBUTES;
 pub type POBJECT_ATTRIBUTES = *mut OBJECT_ATTRIBUTES;
@@ -4215,11 +4257,13 @@ pub struct _GUID {
 }
 #[test]
 fn bindgen_test_layout__GUID() {
-    assert_eq!(::core::mem::size_of::<_GUID>() , 16usize);
-    assert_eq!(::core::mem::align_of::<_GUID>() , 4usize);
+    assert_eq!(::core::mem::size_of::<_GUID>(), 16usize);
+    assert_eq!(::core::mem::align_of::<_GUID>(), 4usize);
 }
 impl Clone for _GUID {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_GUID as GUID;
 pub type LPGUID = *mut GUID;
@@ -4249,36 +4293,40 @@ extern "C" {
     pub fn _get_doserrno(_Value: *mut libc::c_ulong) -> errno_t;
 }
 extern "C" {
-    pub fn memchr(_Buf: *const libc::c_void, _Val: libc::c_int,
-                  _MaxCount: usize) -> *mut libc::c_void;
+    pub fn memchr(_Buf: *const libc::c_void,
+                  _Val: libc::c_int,
+                  _MaxCount: usize)
+                  -> *mut libc::c_void;
 }
 extern "C" {
-    pub fn memcmp(_Buf1: *const libc::c_void, _Buf2: *const libc::c_void,
-                  _Size: usize) -> libc::c_int;
+    pub fn memcmp(_Buf1: *const libc::c_void,
+                  _Buf2: *const libc::c_void,
+                  _Size: usize)
+                  -> libc::c_int;
 }
 extern "C" {
-    pub fn memcpy(_Dst: *mut libc::c_void, _Src: *const libc::c_void,
-                  _Size: usize) -> *mut libc::c_void;
+    pub fn memcpy(_Dst: *mut libc::c_void,
+                  _Src: *const libc::c_void,
+                  _Size: usize)
+                  -> *mut libc::c_void;
 }
 extern "C" {
-    pub fn memmove(_Dst: *mut libc::c_void, _Src: *const libc::c_void,
-                   _Size: usize) -> *mut libc::c_void;
+    pub fn memmove(_Dst: *mut libc::c_void,
+                   _Src: *const libc::c_void,
+                   _Size: usize)
+                   -> *mut libc::c_void;
 }
 extern "C" {
-    pub fn memset(_Dst: *mut libc::c_void, _Val: libc::c_int, _Size: usize)
-     -> *mut libc::c_void;
+    pub fn memset(_Dst: *mut libc::c_void, _Val: libc::c_int, _Size: usize) -> *mut libc::c_void;
 }
 extern "C" {
-    pub fn strchr(_Str: *const libc::c_char, _Val: libc::c_int)
-     -> *mut libc::c_char;
+    pub fn strchr(_Str: *const libc::c_char, _Val: libc::c_int) -> *mut libc::c_char;
 }
 extern "C" {
-    pub fn strrchr(_Str: *const libc::c_char, _Ch: libc::c_int)
-     -> *mut libc::c_char;
+    pub fn strrchr(_Str: *const libc::c_char, _Ch: libc::c_int) -> *mut libc::c_char;
 }
 extern "C" {
-    pub fn strstr(_Str: *const libc::c_char, _SubStr: *const libc::c_char)
-     -> *mut libc::c_char;
+    pub fn strstr(_Str: *const libc::c_char, _SubStr: *const libc::c_char) -> *mut libc::c_char;
 }
 extern "C" {
     pub fn wcschr(_Str: *const wchar_t, _Ch: wchar_t) -> *mut wchar_t;
@@ -4287,63 +4335,80 @@ extern "C" {
     pub fn wcsrchr(_Str: *const wchar_t, _Ch: wchar_t) -> *mut wchar_t;
 }
 extern "C" {
-    pub fn wcsstr(_Str: *const wchar_t, _SubStr: *const wchar_t)
-     -> *mut wchar_t;
+    pub fn wcsstr(_Str: *const wchar_t, _SubStr: *const wchar_t) -> *mut wchar_t;
 }
 extern "C" {
-    pub fn _memicmp(_Buf1: *const libc::c_void, _Buf2: *const libc::c_void,
-                    _Size: usize) -> libc::c_int;
+    pub fn _memicmp(_Buf1: *const libc::c_void,
+                    _Buf2: *const libc::c_void,
+                    _Size: usize)
+                    -> libc::c_int;
 }
 extern "C" {
-    pub fn _memicmp_l(_Buf1: *const libc::c_void, _Buf2: *const libc::c_void,
-                      _Size: usize, _Locale: _locale_t) -> libc::c_int;
+    pub fn _memicmp_l(_Buf1: *const libc::c_void,
+                      _Buf2: *const libc::c_void,
+                      _Size: usize,
+                      _Locale: _locale_t)
+                      -> libc::c_int;
 }
 extern "C" {
-    pub fn memccpy(_Dst: *mut libc::c_void, _Src: *const libc::c_void,
-                   _Val: libc::c_int, _Size: usize) -> *mut libc::c_void;
+    pub fn memccpy(_Dst: *mut libc::c_void,
+                   _Src: *const libc::c_void,
+                   _Val: libc::c_int,
+                   _Size: usize)
+                   -> *mut libc::c_void;
 }
 extern "C" {
-    pub fn memicmp(_Buf1: *const libc::c_void, _Buf2: *const libc::c_void,
-                   _Size: usize) -> libc::c_int;
+    pub fn memicmp(_Buf1: *const libc::c_void,
+                   _Buf2: *const libc::c_void,
+                   _Size: usize)
+                   -> libc::c_int;
 }
 extern "C" {
-    pub fn wcscat_s(_Destination: *mut wchar_t, _SizeInWords: rsize_t,
-                    _Source: *const wchar_t) -> errno_t;
+    pub fn wcscat_s(_Destination: *mut wchar_t,
+                    _SizeInWords: rsize_t,
+                    _Source: *const wchar_t)
+                    -> errno_t;
 }
 extern "C" {
-    pub fn wcscpy_s(_Destination: *mut wchar_t, _SizeInWords: rsize_t,
-                    _Source: *const wchar_t) -> errno_t;
+    pub fn wcscpy_s(_Destination: *mut wchar_t,
+                    _SizeInWords: rsize_t,
+                    _Source: *const wchar_t)
+                    -> errno_t;
 }
 extern "C" {
-    pub fn wcsncat_s(_Destination: *mut wchar_t, _SizeInWords: rsize_t,
-                     _Source: *const wchar_t, _MaxCount: rsize_t) -> errno_t;
+    pub fn wcsncat_s(_Destination: *mut wchar_t,
+                     _SizeInWords: rsize_t,
+                     _Source: *const wchar_t,
+                     _MaxCount: rsize_t)
+                     -> errno_t;
 }
 extern "C" {
-    pub fn wcsncpy_s(_Destination: *mut wchar_t, _SizeInWords: rsize_t,
-                     _Source: *const wchar_t, _MaxCount: rsize_t) -> errno_t;
+    pub fn wcsncpy_s(_Destination: *mut wchar_t,
+                     _SizeInWords: rsize_t,
+                     _Source: *const wchar_t,
+                     _MaxCount: rsize_t)
+                     -> errno_t;
 }
 extern "C" {
-    pub fn wcstok_s(_String: *mut wchar_t, _Delimiter: *const wchar_t,
-                    _Context: *mut *mut wchar_t) -> *mut wchar_t;
+    pub fn wcstok_s(_String: *mut wchar_t,
+                    _Delimiter: *const wchar_t,
+                    _Context: *mut *mut wchar_t)
+                    -> *mut wchar_t;
 }
 extern "C" {
     pub fn _wcsdup(_String: *const wchar_t) -> *mut wchar_t;
 }
 extern "C" {
-    pub fn wcscat(_Destination: *mut wchar_t, _Source: *const wchar_t)
-     -> *mut wchar_t;
+    pub fn wcscat(_Destination: *mut wchar_t, _Source: *const wchar_t) -> *mut wchar_t;
 }
 extern "C" {
-    pub fn wcscmp(_String1: *const wchar_t, _String2: *const wchar_t)
-     -> libc::c_int;
+    pub fn wcscmp(_String1: *const wchar_t, _String2: *const wchar_t) -> libc::c_int;
 }
 extern "C" {
-    pub fn wcscpy(_Destination: *mut wchar_t, _Source: *const wchar_t)
-     -> *mut wchar_t;
+    pub fn wcscpy(_Destination: *mut wchar_t, _Source: *const wchar_t) -> *mut wchar_t;
 }
 extern "C" {
-    pub fn wcscspn(_String: *const wchar_t, _Control: *const wchar_t)
-     -> usize;
+    pub fn wcscspn(_String: *const wchar_t, _Control: *const wchar_t) -> usize;
 }
 extern "C" {
     pub fn wcslen(_String: *const wchar_t) -> usize;
@@ -4352,72 +4417,90 @@ extern "C" {
     pub fn wcsnlen(_Source: *const wchar_t, _MaxCount: usize) -> usize;
 }
 extern "C" {
-    pub fn wcsncat(_Destination: *mut wchar_t, _Source: *const wchar_t,
-                   _Count: usize) -> *mut wchar_t;
+    pub fn wcsncat(_Destination: *mut wchar_t,
+                   _Source: *const wchar_t,
+                   _Count: usize)
+                   -> *mut wchar_t;
 }
 extern "C" {
-    pub fn wcsncmp(_String1: *const wchar_t, _String2: *const wchar_t,
-                   _MaxCount: usize) -> libc::c_int;
+    pub fn wcsncmp(_String1: *const wchar_t,
+                   _String2: *const wchar_t,
+                   _MaxCount: usize)
+                   -> libc::c_int;
 }
 extern "C" {
-    pub fn wcsncpy(_Destination: *mut wchar_t, _Source: *const wchar_t,
-                   _Count: usize) -> *mut wchar_t;
+    pub fn wcsncpy(_Destination: *mut wchar_t,
+                   _Source: *const wchar_t,
+                   _Count: usize)
+                   -> *mut wchar_t;
 }
 extern "C" {
-    pub fn wcspbrk(_String: *const wchar_t, _Control: *const wchar_t)
-     -> *mut wchar_t;
+    pub fn wcspbrk(_String: *const wchar_t, _Control: *const wchar_t) -> *mut wchar_t;
 }
 extern "C" {
     pub fn wcsspn(_String: *const wchar_t, _Control: *const wchar_t) -> usize;
 }
 extern "C" {
-    pub fn wcstok(_String: *mut wchar_t, _Delimiter: *const wchar_t,
-                  _Context: *mut *mut wchar_t) -> *mut wchar_t;
+    pub fn wcstok(_String: *mut wchar_t,
+                  _Delimiter: *const wchar_t,
+                  _Context: *mut *mut wchar_t)
+                  -> *mut wchar_t;
 }
 extern "C" {
     pub fn _wcserror(_ErrorNumber: libc::c_int) -> *mut wchar_t;
 }
 extern "C" {
-    pub fn _wcserror_s(_Buffer: *mut wchar_t, _SizeInWords: usize,
-                       _ErrorNumber: libc::c_int) -> errno_t;
+    pub fn _wcserror_s(_Buffer: *mut wchar_t,
+                       _SizeInWords: usize,
+                       _ErrorNumber: libc::c_int)
+                       -> errno_t;
 }
 extern "C" {
     pub fn __wcserror(_String: *const wchar_t) -> *mut wchar_t;
 }
 extern "C" {
-    pub fn __wcserror_s(_Buffer: *mut wchar_t, _SizeInWords: usize,
-                        _ErrorMessage: *const wchar_t) -> errno_t;
+    pub fn __wcserror_s(_Buffer: *mut wchar_t,
+                        _SizeInWords: usize,
+                        _ErrorMessage: *const wchar_t)
+                        -> errno_t;
 }
 extern "C" {
-    pub fn _wcsicmp(_String1: *const wchar_t, _String2: *const wchar_t)
-     -> libc::c_int;
+    pub fn _wcsicmp(_String1: *const wchar_t, _String2: *const wchar_t) -> libc::c_int;
 }
 extern "C" {
-    pub fn _wcsicmp_l(_String1: *const wchar_t, _String2: *const wchar_t,
-                      _Locale: _locale_t) -> libc::c_int;
+    pub fn _wcsicmp_l(_String1: *const wchar_t,
+                      _String2: *const wchar_t,
+                      _Locale: _locale_t)
+                      -> libc::c_int;
 }
 extern "C" {
-    pub fn _wcsnicmp(_String1: *const wchar_t, _String2: *const wchar_t,
-                     _MaxCount: usize) -> libc::c_int;
+    pub fn _wcsnicmp(_String1: *const wchar_t,
+                     _String2: *const wchar_t,
+                     _MaxCount: usize)
+                     -> libc::c_int;
 }
 extern "C" {
-    pub fn _wcsnicmp_l(_String1: *const wchar_t, _String2: *const wchar_t,
-                       _MaxCount: usize, _Locale: _locale_t) -> libc::c_int;
+    pub fn _wcsnicmp_l(_String1: *const wchar_t,
+                       _String2: *const wchar_t,
+                       _MaxCount: usize,
+                       _Locale: _locale_t)
+                       -> libc::c_int;
 }
 extern "C" {
-    pub fn _wcsnset_s(_Destination: *mut wchar_t, _SizeInWords: usize,
-                      _Value: wchar_t, _MaxCount: usize) -> errno_t;
+    pub fn _wcsnset_s(_Destination: *mut wchar_t,
+                      _SizeInWords: usize,
+                      _Value: wchar_t,
+                      _MaxCount: usize)
+                      -> errno_t;
 }
 extern "C" {
-    pub fn _wcsnset(_String: *mut wchar_t, _Value: wchar_t, _MaxCount: usize)
-     -> *mut wchar_t;
+    pub fn _wcsnset(_String: *mut wchar_t, _Value: wchar_t, _MaxCount: usize) -> *mut wchar_t;
 }
 extern "C" {
     pub fn _wcsrev(_String: *mut wchar_t) -> *mut wchar_t;
 }
 extern "C" {
-    pub fn _wcsset_s(_Destination: *mut wchar_t, _SizeInWords: usize,
-                     _Value: wchar_t) -> errno_t;
+    pub fn _wcsset_s(_Destination: *mut wchar_t, _SizeInWords: usize, _Value: wchar_t) -> errno_t;
 }
 extern "C" {
     pub fn _wcsset(_String: *mut wchar_t, _Value: wchar_t) -> *mut wchar_t;
@@ -4429,12 +4512,10 @@ extern "C" {
     pub fn _wcslwr(_String: *mut wchar_t) -> *mut wchar_t;
 }
 extern "C" {
-    pub fn _wcslwr_s_l(_String: *mut wchar_t, _SizeInWords: usize,
-                       _Locale: _locale_t) -> errno_t;
+    pub fn _wcslwr_s_l(_String: *mut wchar_t, _SizeInWords: usize, _Locale: _locale_t) -> errno_t;
 }
 extern "C" {
-    pub fn _wcslwr_l(_String: *mut wchar_t, _Locale: _locale_t)
-     -> *mut wchar_t;
+    pub fn _wcslwr_l(_String: *mut wchar_t, _Locale: _locale_t) -> *mut wchar_t;
 }
 extern "C" {
     pub fn _wcsupr_s(_String: *mut wchar_t, _Size: usize) -> errno_t;
@@ -4443,67 +4524,79 @@ extern "C" {
     pub fn _wcsupr(_String: *mut wchar_t) -> *mut wchar_t;
 }
 extern "C" {
-    pub fn _wcsupr_s_l(_String: *mut wchar_t, _Size: usize,
-                       _Locale: _locale_t) -> errno_t;
+    pub fn _wcsupr_s_l(_String: *mut wchar_t, _Size: usize, _Locale: _locale_t) -> errno_t;
 }
 extern "C" {
-    pub fn _wcsupr_l(_String: *mut wchar_t, _Locale: _locale_t)
-     -> *mut wchar_t;
+    pub fn _wcsupr_l(_String: *mut wchar_t, _Locale: _locale_t) -> *mut wchar_t;
 }
 extern "C" {
-    pub fn wcsxfrm(_Destination: *mut wchar_t, _Source: *const wchar_t,
-                   _MaxCount: usize) -> usize;
+    pub fn wcsxfrm(_Destination: *mut wchar_t, _Source: *const wchar_t, _MaxCount: usize) -> usize;
 }
 extern "C" {
-    pub fn _wcsxfrm_l(_Destination: *mut wchar_t, _Source: *const wchar_t,
-                      _MaxCount: usize, _Locale: _locale_t) -> usize;
+    pub fn _wcsxfrm_l(_Destination: *mut wchar_t,
+                      _Source: *const wchar_t,
+                      _MaxCount: usize,
+                      _Locale: _locale_t)
+                      -> usize;
 }
 extern "C" {
-    pub fn wcscoll(_String1: *const wchar_t, _String2: *const wchar_t)
-     -> libc::c_int;
+    pub fn wcscoll(_String1: *const wchar_t, _String2: *const wchar_t) -> libc::c_int;
 }
 extern "C" {
-    pub fn _wcscoll_l(_String1: *const wchar_t, _String2: *const wchar_t,
-                      _Locale: _locale_t) -> libc::c_int;
+    pub fn _wcscoll_l(_String1: *const wchar_t,
+                      _String2: *const wchar_t,
+                      _Locale: _locale_t)
+                      -> libc::c_int;
 }
 extern "C" {
-    pub fn _wcsicoll(_String1: *const wchar_t, _String2: *const wchar_t)
-     -> libc::c_int;
+    pub fn _wcsicoll(_String1: *const wchar_t, _String2: *const wchar_t) -> libc::c_int;
 }
 extern "C" {
-    pub fn _wcsicoll_l(_String1: *const wchar_t, _String2: *const wchar_t,
-                       _Locale: _locale_t) -> libc::c_int;
+    pub fn _wcsicoll_l(_String1: *const wchar_t,
+                       _String2: *const wchar_t,
+                       _Locale: _locale_t)
+                       -> libc::c_int;
 }
 extern "C" {
-    pub fn _wcsncoll(_String1: *const wchar_t, _String2: *const wchar_t,
-                     _MaxCount: usize) -> libc::c_int;
+    pub fn _wcsncoll(_String1: *const wchar_t,
+                     _String2: *const wchar_t,
+                     _MaxCount: usize)
+                     -> libc::c_int;
 }
 extern "C" {
-    pub fn _wcsncoll_l(_String1: *const wchar_t, _String2: *const wchar_t,
-                       _MaxCount: usize, _Locale: _locale_t) -> libc::c_int;
+    pub fn _wcsncoll_l(_String1: *const wchar_t,
+                       _String2: *const wchar_t,
+                       _MaxCount: usize,
+                       _Locale: _locale_t)
+                       -> libc::c_int;
 }
 extern "C" {
-    pub fn _wcsnicoll(_String1: *const wchar_t, _String2: *const wchar_t,
-                      _MaxCount: usize) -> libc::c_int;
+    pub fn _wcsnicoll(_String1: *const wchar_t,
+                      _String2: *const wchar_t,
+                      _MaxCount: usize)
+                      -> libc::c_int;
 }
 extern "C" {
-    pub fn _wcsnicoll_l(_String1: *const wchar_t, _String2: *const wchar_t,
-                        _MaxCount: usize, _Locale: _locale_t) -> libc::c_int;
+    pub fn _wcsnicoll_l(_String1: *const wchar_t,
+                        _String2: *const wchar_t,
+                        _MaxCount: usize,
+                        _Locale: _locale_t)
+                        -> libc::c_int;
 }
 extern "C" {
     pub fn wcsdup(_String: *const wchar_t) -> *mut wchar_t;
 }
 extern "C" {
-    pub fn wcsicmp(_String1: *const wchar_t, _String2: *const wchar_t)
-     -> libc::c_int;
+    pub fn wcsicmp(_String1: *const wchar_t, _String2: *const wchar_t) -> libc::c_int;
 }
 extern "C" {
-    pub fn wcsnicmp(_String1: *const wchar_t, _String2: *const wchar_t,
-                    _MaxCount: usize) -> libc::c_int;
+    pub fn wcsnicmp(_String1: *const wchar_t,
+                    _String2: *const wchar_t,
+                    _MaxCount: usize)
+                    -> libc::c_int;
 }
 extern "C" {
-    pub fn wcsnset(_String: *mut wchar_t, _Value: wchar_t, _MaxCount: usize)
-     -> *mut wchar_t;
+    pub fn wcsnset(_String: *mut wchar_t, _Value: wchar_t, _MaxCount: usize) -> *mut wchar_t;
 }
 extern "C" {
     pub fn wcsrev(_String: *mut wchar_t) -> *mut wchar_t;
@@ -4518,68 +4611,80 @@ extern "C" {
     pub fn wcsupr(_String: *mut wchar_t) -> *mut wchar_t;
 }
 extern "C" {
-    pub fn wcsicoll(_String1: *const wchar_t, _String2: *const wchar_t)
-     -> libc::c_int;
+    pub fn wcsicoll(_String1: *const wchar_t, _String2: *const wchar_t) -> libc::c_int;
 }
 extern "C" {
-    pub fn strcpy_s(_Destination: *mut libc::c_char, _SizeInBytes: rsize_t,
-                    _Source: *const libc::c_char) -> errno_t;
+    pub fn strcpy_s(_Destination: *mut libc::c_char,
+                    _SizeInBytes: rsize_t,
+                    _Source: *const libc::c_char)
+                    -> errno_t;
 }
 extern "C" {
-    pub fn strcat_s(_Destination: *mut libc::c_char, _SizeInBytes: rsize_t,
-                    _Source: *const libc::c_char) -> errno_t;
+    pub fn strcat_s(_Destination: *mut libc::c_char,
+                    _SizeInBytes: rsize_t,
+                    _Source: *const libc::c_char)
+                    -> errno_t;
 }
 extern "C" {
-    pub fn strerror_s(_Buffer: *mut libc::c_char, _SizeInBytes: usize,
-                      _ErrorNumber: libc::c_int) -> errno_t;
+    pub fn strerror_s(_Buffer: *mut libc::c_char,
+                      _SizeInBytes: usize,
+                      _ErrorNumber: libc::c_int)
+                      -> errno_t;
 }
 extern "C" {
-    pub fn strncat_s(_Destination: *mut libc::c_char, _SizeInBytes: rsize_t,
-                     _Source: *const libc::c_char, _MaxCount: rsize_t)
-     -> errno_t;
+    pub fn strncat_s(_Destination: *mut libc::c_char,
+                     _SizeInBytes: rsize_t,
+                     _Source: *const libc::c_char,
+                     _MaxCount: rsize_t)
+                     -> errno_t;
 }
 extern "C" {
-    pub fn strncpy_s(_Destination: *mut libc::c_char, _SizeInBytes: rsize_t,
-                     _Source: *const libc::c_char, _MaxCount: rsize_t)
-     -> errno_t;
+    pub fn strncpy_s(_Destination: *mut libc::c_char,
+                     _SizeInBytes: rsize_t,
+                     _Source: *const libc::c_char,
+                     _MaxCount: rsize_t)
+                     -> errno_t;
 }
 extern "C" {
     pub fn strtok_s(_String: *mut libc::c_char,
                     _Delimiter: *const libc::c_char,
-                    _Context: *mut *mut libc::c_char) -> *mut libc::c_char;
+                    _Context: *mut *mut libc::c_char)
+                    -> *mut libc::c_char;
 }
 extern "C" {
-    pub fn _memccpy(_Dst: *mut libc::c_void, _Src: *const libc::c_void,
-                    _Val: libc::c_int, _MaxCount: usize) -> *mut libc::c_void;
+    pub fn _memccpy(_Dst: *mut libc::c_void,
+                    _Src: *const libc::c_void,
+                    _Val: libc::c_int,
+                    _MaxCount: usize)
+                    -> *mut libc::c_void;
 }
 extern "C" {
     pub fn strcat(_Destination: *mut libc::c_char,
-                  _Source: *const libc::c_char) -> *mut libc::c_char;
+                  _Source: *const libc::c_char)
+                  -> *mut libc::c_char;
 }
 extern "C" {
-    pub fn strcmp(_Str1: *const libc::c_char, _Str2: *const libc::c_char)
-     -> libc::c_int;
+    pub fn strcmp(_Str1: *const libc::c_char, _Str2: *const libc::c_char) -> libc::c_int;
 }
 extern "C" {
-    pub fn _strcmpi(_String1: *const libc::c_char,
-                    _String2: *const libc::c_char) -> libc::c_int;
+    pub fn _strcmpi(_String1: *const libc::c_char, _String2: *const libc::c_char) -> libc::c_int;
 }
 extern "C" {
-    pub fn strcoll(_String1: *const libc::c_char,
-                   _String2: *const libc::c_char) -> libc::c_int;
+    pub fn strcoll(_String1: *const libc::c_char, _String2: *const libc::c_char) -> libc::c_int;
 }
 extern "C" {
     pub fn _strcoll_l(_String1: *const libc::c_char,
-                      _String2: *const libc::c_char, _Locale: _locale_t)
-     -> libc::c_int;
+                      _String2: *const libc::c_char,
+                      _Locale: _locale_t)
+                      -> libc::c_int;
 }
 extern "C" {
     pub fn strcpy(_Destination: *mut libc::c_char,
-                  _Source: *const libc::c_char) -> *mut libc::c_char;
+                  _Source: *const libc::c_char)
+                  -> *mut libc::c_char;
 }
 extern "C" {
-    pub fn strcspn(_Str: *const libc::c_char, _Control: *const libc::c_char)
-     -> libc::c_ulonglong;
+    pub fn strcspn(_Str: *const libc::c_char, _Control: *const libc::c_char) -> libc::c_ulonglong;
 }
 extern "C" {
     pub fn _strdup(_Source: *const libc::c_char) -> *mut libc::c_char;
@@ -4588,29 +4693,31 @@ extern "C" {
     pub fn _strerror(_ErrorMessage: *const libc::c_char) -> *mut libc::c_char;
 }
 extern "C" {
-    pub fn _strerror_s(_Buffer: *mut libc::c_char, _SizeInBytes: usize,
-                       _ErrorMessage: *const libc::c_char) -> errno_t;
+    pub fn _strerror_s(_Buffer: *mut libc::c_char,
+                       _SizeInBytes: usize,
+                       _ErrorMessage: *const libc::c_char)
+                       -> errno_t;
 }
 extern "C" {
     pub fn strerror(_ErrorMessage: libc::c_int) -> *mut libc::c_char;
 }
 extern "C" {
-    pub fn _stricmp(_String1: *const libc::c_char,
-                    _String2: *const libc::c_char) -> libc::c_int;
+    pub fn _stricmp(_String1: *const libc::c_char, _String2: *const libc::c_char) -> libc::c_int;
 }
 extern "C" {
-    pub fn _stricoll(_String1: *const libc::c_char,
-                     _String2: *const libc::c_char) -> libc::c_int;
+    pub fn _stricoll(_String1: *const libc::c_char, _String2: *const libc::c_char) -> libc::c_int;
 }
 extern "C" {
     pub fn _stricoll_l(_String1: *const libc::c_char,
-                       _String2: *const libc::c_char, _Locale: _locale_t)
-     -> libc::c_int;
+                       _String2: *const libc::c_char,
+                       _Locale: _locale_t)
+                       -> libc::c_int;
 }
 extern "C" {
     pub fn _stricmp_l(_String1: *const libc::c_char,
-                      _String2: *const libc::c_char, _Locale: _locale_t)
-     -> libc::c_int;
+                      _String2: *const libc::c_char,
+                      _Locale: _locale_t)
+                      -> libc::c_int;
 }
 extern "C" {
     pub fn strlen(_Str: *const libc::c_char) -> libc::c_ulonglong;
@@ -4622,93 +4729,109 @@ extern "C" {
     pub fn _strlwr(_String: *mut libc::c_char) -> *mut libc::c_char;
 }
 extern "C" {
-    pub fn _strlwr_s_l(_String: *mut libc::c_char, _Size: usize,
-                       _Locale: _locale_t) -> errno_t;
+    pub fn _strlwr_s_l(_String: *mut libc::c_char, _Size: usize, _Locale: _locale_t) -> errno_t;
 }
 extern "C" {
-    pub fn _strlwr_l(_String: *mut libc::c_char, _Locale: _locale_t)
-     -> *mut libc::c_char;
+    pub fn _strlwr_l(_String: *mut libc::c_char, _Locale: _locale_t) -> *mut libc::c_char;
 }
 extern "C" {
     pub fn strncat(_Destination: *mut libc::c_char,
-                   _Source: *const libc::c_char, _Count: usize)
-     -> *mut libc::c_char;
+                   _Source: *const libc::c_char,
+                   _Count: usize)
+                   -> *mut libc::c_char;
 }
 extern "C" {
-    pub fn strncmp(_Str1: *const libc::c_char, _Str2: *const libc::c_char,
-                   _MaxCount: usize) -> libc::c_int;
+    pub fn strncmp(_Str1: *const libc::c_char,
+                   _Str2: *const libc::c_char,
+                   _MaxCount: usize)
+                   -> libc::c_int;
 }
 extern "C" {
     pub fn _strnicmp(_String1: *const libc::c_char,
-                     _String2: *const libc::c_char, _MaxCount: usize)
-     -> libc::c_int;
+                     _String2: *const libc::c_char,
+                     _MaxCount: usize)
+                     -> libc::c_int;
 }
 extern "C" {
     pub fn _strnicmp_l(_String1: *const libc::c_char,
-                       _String2: *const libc::c_char, _MaxCount: usize,
-                       _Locale: _locale_t) -> libc::c_int;
+                       _String2: *const libc::c_char,
+                       _MaxCount: usize,
+                       _Locale: _locale_t)
+                       -> libc::c_int;
 }
 extern "C" {
     pub fn _strnicoll(_String1: *const libc::c_char,
-                      _String2: *const libc::c_char, _MaxCount: usize)
-     -> libc::c_int;
+                      _String2: *const libc::c_char,
+                      _MaxCount: usize)
+                      -> libc::c_int;
 }
 extern "C" {
     pub fn _strnicoll_l(_String1: *const libc::c_char,
-                        _String2: *const libc::c_char, _MaxCount: usize,
-                        _Locale: _locale_t) -> libc::c_int;
+                        _String2: *const libc::c_char,
+                        _MaxCount: usize,
+                        _Locale: _locale_t)
+                        -> libc::c_int;
 }
 extern "C" {
     pub fn _strncoll(_String1: *const libc::c_char,
-                     _String2: *const libc::c_char, _MaxCount: usize)
-     -> libc::c_int;
+                     _String2: *const libc::c_char,
+                     _MaxCount: usize)
+                     -> libc::c_int;
 }
 extern "C" {
     pub fn _strncoll_l(_String1: *const libc::c_char,
-                       _String2: *const libc::c_char, _MaxCount: usize,
-                       _Locale: _locale_t) -> libc::c_int;
+                       _String2: *const libc::c_char,
+                       _MaxCount: usize,
+                       _Locale: _locale_t)
+                       -> libc::c_int;
 }
 extern "C" {
     pub fn __strncnt(_String: *const libc::c_char, _Count: usize) -> usize;
 }
 extern "C" {
     pub fn strncpy(_Destination: *mut libc::c_char,
-                   _Source: *const libc::c_char, _Count: usize)
-     -> *mut libc::c_char;
+                   _Source: *const libc::c_char,
+                   _Count: usize)
+                   -> *mut libc::c_char;
 }
 extern "C" {
     pub fn strnlen(_String: *const libc::c_char, _MaxCount: usize) -> usize;
 }
 extern "C" {
-    pub fn _strnset_s(_String: *mut libc::c_char, _SizeInBytes: usize,
-                      _Value: libc::c_int, _MaxCount: usize) -> errno_t;
+    pub fn _strnset_s(_String: *mut libc::c_char,
+                      _SizeInBytes: usize,
+                      _Value: libc::c_int,
+                      _MaxCount: usize)
+                      -> errno_t;
 }
 extern "C" {
-    pub fn _strnset(_Destination: *mut libc::c_char, _Value: libc::c_int,
-                    _Count: usize) -> *mut libc::c_char;
+    pub fn _strnset(_Destination: *mut libc::c_char,
+                    _Value: libc::c_int,
+                    _Count: usize)
+                    -> *mut libc::c_char;
 }
 extern "C" {
-    pub fn strpbrk(_Str: *const libc::c_char, _Control: *const libc::c_char)
-     -> *mut libc::c_char;
+    pub fn strpbrk(_Str: *const libc::c_char, _Control: *const libc::c_char) -> *mut libc::c_char;
 }
 extern "C" {
     pub fn _strrev(_Str: *mut libc::c_char) -> *mut libc::c_char;
 }
 extern "C" {
-    pub fn _strset_s(_Destination: *mut libc::c_char, _DestinationSize: usize,
-                     _Value: libc::c_int) -> errno_t;
+    pub fn _strset_s(_Destination: *mut libc::c_char,
+                     _DestinationSize: usize,
+                     _Value: libc::c_int)
+                     -> errno_t;
 }
 extern "C" {
-    pub fn _strset(_Destination: *mut libc::c_char, _Value: libc::c_int)
-     -> *mut libc::c_char;
+    pub fn _strset(_Destination: *mut libc::c_char, _Value: libc::c_int) -> *mut libc::c_char;
 }
 extern "C" {
-    pub fn strspn(_Str: *const libc::c_char, _Control: *const libc::c_char)
-     -> libc::c_ulonglong;
+    pub fn strspn(_Str: *const libc::c_char, _Control: *const libc::c_char) -> libc::c_ulonglong;
 }
 extern "C" {
-    pub fn strtok(_String: *mut libc::c_char, _Delimiter: *const libc::c_char)
-     -> *mut libc::c_char;
+    pub fn strtok(_String: *mut libc::c_char,
+                  _Delimiter: *const libc::c_char)
+                  -> *mut libc::c_char;
 }
 extern "C" {
     pub fn _strupr_s(_String: *mut libc::c_char, _Size: usize) -> errno_t;
@@ -4717,52 +4840,53 @@ extern "C" {
     pub fn _strupr(_String: *mut libc::c_char) -> *mut libc::c_char;
 }
 extern "C" {
-    pub fn _strupr_s_l(_String: *mut libc::c_char, _Size: usize,
-                       _Locale: _locale_t) -> errno_t;
+    pub fn _strupr_s_l(_String: *mut libc::c_char, _Size: usize, _Locale: _locale_t) -> errno_t;
 }
 extern "C" {
-    pub fn _strupr_l(_String: *mut libc::c_char, _Locale: _locale_t)
-     -> *mut libc::c_char;
+    pub fn _strupr_l(_String: *mut libc::c_char, _Locale: _locale_t) -> *mut libc::c_char;
 }
 extern "C" {
     pub fn strxfrm(_Destination: *mut libc::c_char,
-                   _Source: *const libc::c_char, _MaxCount: usize)
-     -> libc::c_ulonglong;
+                   _Source: *const libc::c_char,
+                   _MaxCount: usize)
+                   -> libc::c_ulonglong;
 }
 extern "C" {
     pub fn _strxfrm_l(_Destination: *mut libc::c_char,
-                      _Source: *const libc::c_char, _MaxCount: usize,
-                      _Locale: _locale_t) -> usize;
+                      _Source: *const libc::c_char,
+                      _MaxCount: usize,
+                      _Locale: _locale_t)
+                      -> usize;
 }
 extern "C" {
     pub fn strdup(_String: *const libc::c_char) -> *mut libc::c_char;
 }
 extern "C" {
-    pub fn strcmpi(_String1: *const libc::c_char,
-                   _String2: *const libc::c_char) -> libc::c_int;
+    pub fn strcmpi(_String1: *const libc::c_char, _String2: *const libc::c_char) -> libc::c_int;
 }
 extern "C" {
-    pub fn stricmp(_String1: *const libc::c_char,
-                   _String2: *const libc::c_char) -> libc::c_int;
+    pub fn stricmp(_String1: *const libc::c_char, _String2: *const libc::c_char) -> libc::c_int;
 }
 extern "C" {
     pub fn strlwr(_String: *mut libc::c_char) -> *mut libc::c_char;
 }
 extern "C" {
     pub fn strnicmp(_String1: *const libc::c_char,
-                    _String2: *const libc::c_char, _MaxCount: usize)
-     -> libc::c_int;
+                    _String2: *const libc::c_char,
+                    _MaxCount: usize)
+                    -> libc::c_int;
 }
 extern "C" {
-    pub fn strnset(_String: *mut libc::c_char, _Value: libc::c_int,
-                   _MaxCount: usize) -> *mut libc::c_char;
+    pub fn strnset(_String: *mut libc::c_char,
+                   _Value: libc::c_int,
+                   _MaxCount: usize)
+                   -> *mut libc::c_char;
 }
 extern "C" {
     pub fn strrev(_String: *mut libc::c_char) -> *mut libc::c_char;
 }
 extern "C" {
-    pub fn strset(_String: *mut libc::c_char, _Value: libc::c_int)
-     -> *mut libc::c_char;
+    pub fn strset(_String: *mut libc::c_char, _Value: libc::c_int) -> *mut libc::c_char;
 }
 extern "C" {
     pub fn strupr(_String: *mut libc::c_char) -> *mut libc::c_char;
@@ -4775,16 +4899,17 @@ pub struct _OBJECTID {
 }
 #[test]
 fn bindgen_test_layout__OBJECTID() {
-    assert_eq!(::core::mem::size_of::<_OBJECTID>() , 20usize);
-    assert_eq!(::core::mem::align_of::<_OBJECTID>() , 4usize);
+    assert_eq!(::core::mem::size_of::<_OBJECTID>(), 20usize);
+    assert_eq!(::core::mem::align_of::<_OBJECTID>(), 4usize);
 }
 impl Clone for _OBJECTID {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_OBJECTID as OBJECTID;
 extern "C" {
-    pub fn _RTL_CONSTANT_STRING_type_check(s: *const libc::c_void)
-     -> libc::c_char;
+    pub fn _RTL_CONSTANT_STRING_type_check(s: *const libc::c_void) -> libc::c_char;
 }
 pub type PEXCEPTION_ROUTINE =
     ::core::option::Option<unsafe extern "C" fn() -> EXCEPTION_DISPOSITION>;
@@ -4853,21 +4978,25 @@ pub struct _ACCESS_STATE__bindgen_ty_1 {
 }
 #[test]
 fn bindgen_test_layout__ACCESS_STATE__bindgen_ty_1() {
-    assert_eq!(::core::mem::size_of::<_ACCESS_STATE__bindgen_ty_1>() ,
+    assert_eq!(::core::mem::size_of::<_ACCESS_STATE__bindgen_ty_1>(),
                44usize);
-    assert_eq!(::core::mem::align_of::<_ACCESS_STATE__bindgen_ty_1>() ,
+    assert_eq!(::core::mem::align_of::<_ACCESS_STATE__bindgen_ty_1>(),
                4usize);
 }
 impl Clone for _ACCESS_STATE__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[test]
 fn bindgen_test_layout__ACCESS_STATE() {
-    assert_eq!(::core::mem::size_of::<_ACCESS_STATE>() , 160usize);
-    assert_eq!(::core::mem::align_of::<_ACCESS_STATE>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_ACCESS_STATE>(), 160usize);
+    assert_eq!(::core::mem::align_of::<_ACCESS_STATE>(), 8usize);
 }
 impl Clone for _ACCESS_STATE {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type PACCESS_STATE = *mut _ACCESS_STATE;
 #[repr(C)]
@@ -4876,7 +5005,9 @@ pub struct _CALLBACK_OBJECT {
     pub _address: u8,
 }
 impl Clone for _CALLBACK_OBJECT {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type PCALLBACK_OBJECT = *mut _CALLBACK_OBJECT;
 #[repr(C)]
@@ -4885,7 +5016,9 @@ pub struct _EPROCESS {
     pub _address: u8,
 }
 impl Clone for _EPROCESS {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type PEPROCESS = *mut _EPROCESS;
 #[repr(C)]
@@ -4894,7 +5027,9 @@ pub struct _ETHREAD {
     pub _address: u8,
 }
 impl Clone for _ETHREAD {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type PETHREAD = *mut _ETHREAD;
 #[repr(C)]
@@ -4903,7 +5038,9 @@ pub struct _IO_TIMER {
     pub _address: u8,
 }
 impl Clone for _IO_TIMER {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type PIO_TIMER = *mut _IO_TIMER;
 #[repr(C)]
@@ -4912,7 +5049,9 @@ pub struct _KINTERRUPT {
     pub _address: u8,
 }
 impl Clone for _KINTERRUPT {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type PKINTERRUPT = *mut _KINTERRUPT;
 #[repr(C)]
@@ -4921,7 +5060,9 @@ pub struct _KTHREAD {
     pub _address: u8,
 }
 impl Clone for _KTHREAD {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type PKTHREAD = *mut _KTHREAD;
 pub type PRKTHREAD = *mut _KTHREAD;
@@ -4931,7 +5072,9 @@ pub struct _KPROCESS {
     pub _address: u8,
 }
 impl Clone for _KPROCESS {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type PKPROCESS = *mut _KPROCESS;
 pub type PRKPROCESS = *mut _KPROCESS;
@@ -4941,7 +5084,9 @@ pub struct _OBJECT_TYPE {
     pub _address: u8,
 }
 impl Clone for _OBJECT_TYPE {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type POBJECT_TYPE = *mut _OBJECT_TYPE;
 #[repr(C)]
@@ -4954,13 +5099,15 @@ pub struct _SECURITY_QUALITY_OF_SERVICE {
 }
 #[test]
 fn bindgen_test_layout__SECURITY_QUALITY_OF_SERVICE() {
-    assert_eq!(::core::mem::size_of::<_SECURITY_QUALITY_OF_SERVICE>() ,
+    assert_eq!(::core::mem::size_of::<_SECURITY_QUALITY_OF_SERVICE>(),
                12usize);
-    assert_eq!(::core::mem::align_of::<_SECURITY_QUALITY_OF_SERVICE>() ,
+    assert_eq!(::core::mem::align_of::<_SECURITY_QUALITY_OF_SERVICE>(),
                4usize);
 }
 impl Clone for _SECURITY_QUALITY_OF_SERVICE {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type PSECURITY_QUALITY_OF_SERVICE = *mut _SECURITY_QUALITY_OF_SERVICE;
 pub type PCONTEXT = *mut _CONTEXT;
@@ -5030,7 +5177,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_1 {
     pub EaLength: ULONG,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5042,7 +5191,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_2 {
     pub Parameters: PNAMED_PIPE_CREATE_PARAMETERS,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_2 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5054,7 +5205,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_3 {
     pub Parameters: PMAILSLOT_CREATE_PARAMETERS,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_3 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5064,7 +5217,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_4 {
     pub ByteOffset: LARGE_INTEGER,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_4 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5074,7 +5229,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_5 {
     pub ByteOffset: LARGE_INTEGER,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_5 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5085,7 +5242,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_6 {
     pub FileIndex: ULONG,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_6 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5094,7 +5253,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_7 {
     pub CompletionFilter: ULONG,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_7 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5103,7 +5264,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_8 {
     pub FileInformationClass: FILE_INFORMATION_CLASS,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_8 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5127,15 +5290,20 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_9__bindgen_ty_1__bindgen
     pub ReplaceIfExists: BOOLEAN,
     pub AdvanceOnly: BOOLEAN,
 }
-impl Clone for
- _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_9__bindgen_ty_1__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_9__bindgen_ty_1__bindgen_ty_1 {
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_9__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_9 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5146,7 +5314,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_10 {
     pub EaIndex: ULONG,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_10 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5154,7 +5324,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_11 {
     pub Length: ULONG,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_11 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5163,7 +5335,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_12 {
     pub FsInformationClass: FS_INFORMATION_CLASS,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_12 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5172,7 +5346,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_13 {
     pub FsInformationClass: FS_INFORMATION_CLASS,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_13 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5183,7 +5359,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_14 {
     pub Type3InputBuffer: PVOID,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_14 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5193,7 +5371,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_15 {
     pub ByteOffset: LARGE_INTEGER,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_15 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5204,7 +5384,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_16 {
     pub Type3InputBuffer: PVOID,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_16 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5213,7 +5395,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_17 {
     pub Length: ULONG,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_17 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5222,7 +5406,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_18 {
     pub SecurityDescriptor: PSECURITY_DESCRIPTOR,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_18 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5231,7 +5417,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_19 {
     pub DeviceObject: PDEVICE_OBJECT,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_19 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5240,7 +5428,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_20 {
     pub DeviceObject: PDEVICE_OBJECT,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_20 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5248,7 +5438,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_21 {
     pub Srb: *mut _SCSI_REQUEST_BLOCK,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_21 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5259,7 +5451,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_22 {
     pub SidListLength: ULONG,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_22 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5267,7 +5461,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_23 {
     pub Length: ULONG,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_23 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5275,7 +5471,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_24 {
     pub Type: DEVICE_RELATION_TYPE,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_24 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5287,7 +5485,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_25 {
     pub InterfaceSpecificData: PVOID,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_25 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5295,7 +5495,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_26 {
     pub Capabilities: PDEVICE_CAPABILITIES,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_26 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5303,7 +5505,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_27 {
     pub IoResourceRequirementList: PIO_RESOURCE_REQUIREMENTS_LIST,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_27 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5314,7 +5518,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_28 {
     pub Length: ULONG,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_28 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5322,7 +5528,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_29 {
     pub Lock: BOOLEAN,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_29 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5330,7 +5538,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_30 {
     pub IdType: BUS_QUERY_ID_TYPE,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_30 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5339,7 +5549,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_31 {
     pub LocaleId: LCID,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_31 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5349,7 +5561,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_32 {
     pub Type: DEVICE_USAGE_NOTIFICATION_TYPE,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_32 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5357,7 +5571,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_33 {
     pub PowerState: SYSTEM_POWER_STATE,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_33 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5365,7 +5581,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_34 {
     pub PowerSequence: PPOWER_SEQUENCE,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_34 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5383,10 +5601,14 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_35__bindgen_ty_1 {
     pub bindgen_union_field: u32,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_35__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_35 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5395,7 +5617,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_36 {
     pub AllocatedResourcesTranslated: PCM_RESOURCE_LIST,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_36 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5406,7 +5630,9 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_37 {
     pub Buffer: PVOID,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_37 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5417,13 +5643,19 @@ pub struct _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_38 {
     pub Argument4: PVOID,
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1__bindgen_ty_38 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl Clone for _IO_STACK_LOCATION__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl Clone for _IO_STACK_LOCATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type PIO_STACK_LOCATION = *mut _IO_STACK_LOCATION;
 #[repr(C)]
@@ -5441,11 +5673,13 @@ pub struct _VPB {
 }
 #[test]
 fn bindgen_test_layout__VPB() {
-    assert_eq!(::core::mem::size_of::<_VPB>() , 96usize);
-    assert_eq!(::core::mem::align_of::<_VPB>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_VPB>(), 96usize);
+    assert_eq!(::core::mem::align_of::<_VPB>(), 8usize);
 }
 impl Clone for _VPB {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type PVPB = *mut _VPB;
 #[repr(C)]
@@ -5454,7 +5688,9 @@ pub struct _FILE_GET_QUOTA_INFORMATION {
     pub _address: u8,
 }
 impl Clone for _FILE_GET_QUOTA_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type PFILE_GET_QUOTA_INFORMATION = *mut _FILE_GET_QUOTA_INFORMATION;
 extern "C" {
@@ -5464,7 +5700,10 @@ pub const HAL_MCE_RECORD: _bindgen_ty_2 = _bindgen_ty_2::HAL_MCE_RECORD;
 pub const HAL_MCA_RECORD: _bindgen_ty_2 = _bindgen_ty_2::HAL_MCA_RECORD;
 #[repr(i32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum _bindgen_ty_2 { HAL_MCE_RECORD = 0, HAL_MCA_RECORD = 1, }
+pub enum _bindgen_ty_2 {
+    HAL_MCE_RECORD = 0,
+    HAL_MCA_RECORD = 1,
+}
 pub use self::_bindgen_ty_2 as MCA_EXCEPTION_TYPE;
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5481,19 +5720,23 @@ pub struct _MCI_ADDR__bindgen_ty_1 {
 }
 #[test]
 fn bindgen_test_layout__MCI_ADDR__bindgen_ty_1() {
-    assert_eq!(::core::mem::size_of::<_MCI_ADDR__bindgen_ty_1>() , 8usize);
-    assert_eq!(::core::mem::align_of::<_MCI_ADDR__bindgen_ty_1>() , 4usize);
+    assert_eq!(::core::mem::size_of::<_MCI_ADDR__bindgen_ty_1>(), 8usize);
+    assert_eq!(::core::mem::align_of::<_MCI_ADDR__bindgen_ty_1>(), 4usize);
 }
 impl Clone for _MCI_ADDR__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[test]
 fn bindgen_test_layout__MCI_ADDR() {
-    assert_eq!(::core::mem::size_of::<_MCI_ADDR>() , 8usize);
-    assert_eq!(::core::mem::align_of::<_MCI_ADDR>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_MCI_ADDR>(), 8usize);
+    assert_eq!(::core::mem::align_of::<_MCI_ADDR>(), 8usize);
 }
 impl Clone for _MCI_ADDR {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_MCI_ADDR as MCI_ADDR;
 pub type PMCI_ADDR = *mut _MCI_ADDR;
@@ -5513,133 +5756,113 @@ pub struct _MCI_STATS__bindgen_ty_1 {
 }
 #[test]
 fn bindgen_test_layout__MCI_STATS__bindgen_ty_1() {
-    assert_eq!(::core::mem::size_of::<_MCI_STATS__bindgen_ty_1>() , 8usize);
-    assert_eq!(::core::mem::align_of::<_MCI_STATS__bindgen_ty_1>() , 4usize);
+    assert_eq!(::core::mem::size_of::<_MCI_STATS__bindgen_ty_1>(), 8usize);
+    assert_eq!(::core::mem::align_of::<_MCI_STATS__bindgen_ty_1>(), 4usize);
 }
 impl Clone for _MCI_STATS__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl _MCI_STATS__bindgen_ty_1 {
     #[inline]
     pub fn OtherInfo(&self) -> ULONG {
         unsafe {
-            ::core::mem::transmute(((self._bitfield_1 &
-                                         (33554431usize as u32)) >> 0u32) as
-                                       u32)
+            ::core::mem::transmute(((self._bitfield_1 & (33554431usize as u32)) >> 0u32) as u32)
         }
     }
     #[inline]
     pub fn set_OtherInfo(&mut self, val: ULONG) {
         self._bitfield_1 &= !(33554431usize as u32);
-        self._bitfield_1 |=
-            ((val as u32 as u32) << 0u32) & (33554431usize as u32);
+        self._bitfield_1 |= ((val as u32 as u32) << 0u32) & (33554431usize as u32);
     }
     #[inline]
     pub fn Damage(&self) -> ULONG {
         unsafe {
-            ::core::mem::transmute(((self._bitfield_1 &
-                                         (33554432usize as u32)) >> 25u32) as
-                                       u32)
+            ::core::mem::transmute(((self._bitfield_1 & (33554432usize as u32)) >> 25u32) as u32)
         }
     }
     #[inline]
     pub fn set_Damage(&mut self, val: ULONG) {
         self._bitfield_1 &= !(33554432usize as u32);
-        self._bitfield_1 |=
-            ((val as u32 as u32) << 25u32) & (33554432usize as u32);
+        self._bitfield_1 |= ((val as u32 as u32) << 25u32) & (33554432usize as u32);
     }
     #[inline]
     pub fn AddressValid(&self) -> ULONG {
         unsafe {
-            ::core::mem::transmute(((self._bitfield_1 &
-                                         (67108864usize as u32)) >> 26u32) as
-                                       u32)
+            ::core::mem::transmute(((self._bitfield_1 & (67108864usize as u32)) >> 26u32) as u32)
         }
     }
     #[inline]
     pub fn set_AddressValid(&mut self, val: ULONG) {
         self._bitfield_1 &= !(67108864usize as u32);
-        self._bitfield_1 |=
-            ((val as u32 as u32) << 26u32) & (67108864usize as u32);
+        self._bitfield_1 |= ((val as u32 as u32) << 26u32) & (67108864usize as u32);
     }
     #[inline]
     pub fn MiscValid(&self) -> ULONG {
         unsafe {
-            ::core::mem::transmute(((self._bitfield_1 &
-                                         (134217728usize as u32)) >> 27u32) as
-                                       u32)
+            ::core::mem::transmute(((self._bitfield_1 & (134217728usize as u32)) >> 27u32) as u32)
         }
     }
     #[inline]
     pub fn set_MiscValid(&mut self, val: ULONG) {
         self._bitfield_1 &= !(134217728usize as u32);
-        self._bitfield_1 |=
-            ((val as u32 as u32) << 27u32) & (134217728usize as u32);
+        self._bitfield_1 |= ((val as u32 as u32) << 27u32) & (134217728usize as u32);
     }
     #[inline]
     pub fn Enabled(&self) -> ULONG {
         unsafe {
-            ::core::mem::transmute(((self._bitfield_1 &
-                                         (268435456usize as u32)) >> 28u32) as
-                                       u32)
+            ::core::mem::transmute(((self._bitfield_1 & (268435456usize as u32)) >> 28u32) as u32)
         }
     }
     #[inline]
     pub fn set_Enabled(&mut self, val: ULONG) {
         self._bitfield_1 &= !(268435456usize as u32);
-        self._bitfield_1 |=
-            ((val as u32 as u32) << 28u32) & (268435456usize as u32);
+        self._bitfield_1 |= ((val as u32 as u32) << 28u32) & (268435456usize as u32);
     }
     #[inline]
     pub fn UnCorrected(&self) -> ULONG {
         unsafe {
-            ::core::mem::transmute(((self._bitfield_1 &
-                                         (536870912usize as u32)) >> 29u32) as
-                                       u32)
+            ::core::mem::transmute(((self._bitfield_1 & (536870912usize as u32)) >> 29u32) as u32)
         }
     }
     #[inline]
     pub fn set_UnCorrected(&mut self, val: ULONG) {
         self._bitfield_1 &= !(536870912usize as u32);
-        self._bitfield_1 |=
-            ((val as u32 as u32) << 29u32) & (536870912usize as u32);
+        self._bitfield_1 |= ((val as u32 as u32) << 29u32) & (536870912usize as u32);
     }
     #[inline]
     pub fn OverFlow(&self) -> ULONG {
         unsafe {
-            ::core::mem::transmute(((self._bitfield_1 &
-                                         (1073741824usize as u32)) >> 30u32)
-                                       as u32)
+            ::core::mem::transmute(((self._bitfield_1 & (1073741824usize as u32)) >> 30u32) as u32)
         }
     }
     #[inline]
     pub fn set_OverFlow(&mut self, val: ULONG) {
         self._bitfield_1 &= !(1073741824usize as u32);
-        self._bitfield_1 |=
-            ((val as u32 as u32) << 30u32) & (1073741824usize as u32);
+        self._bitfield_1 |= ((val as u32 as u32) << 30u32) & (1073741824usize as u32);
     }
     #[inline]
     pub fn Valid(&self) -> ULONG {
         unsafe {
-            ::core::mem::transmute(((self._bitfield_1 &
-                                         (2147483648usize as u32)) >> 31u32)
-                                       as u32)
+            ::core::mem::transmute(((self._bitfield_1 & (2147483648usize as u32)) >> 31u32) as u32)
         }
     }
     #[inline]
     pub fn set_Valid(&mut self, val: ULONG) {
         self._bitfield_1 &= !(2147483648usize as u32);
-        self._bitfield_1 |=
-            ((val as u32 as u32) << 31u32) & (2147483648usize as u32);
+        self._bitfield_1 |= ((val as u32 as u32) << 31u32) & (2147483648usize as u32);
     }
 }
 #[test]
 fn bindgen_test_layout__MCI_STATS() {
-    assert_eq!(::core::mem::size_of::<_MCI_STATS>() , 8usize);
-    assert_eq!(::core::mem::align_of::<_MCI_STATS>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_MCI_STATS>(), 8usize);
+    assert_eq!(::core::mem::align_of::<_MCI_STATS>(), 8usize);
 }
 impl Clone for _MCI_STATS {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_MCI_STATS as MCI_STATS;
 pub type PMCI_STATS = *mut _MCI_STATS;
@@ -5674,13 +5897,15 @@ pub struct _MCA_EXCEPTION__bindgen_ty_1__bindgen_ty_1 {
 }
 #[test]
 fn bindgen_test_layout__MCA_EXCEPTION__bindgen_ty_1__bindgen_ty_1() {
-    assert_eq!(::core::mem::size_of::<_MCA_EXCEPTION__bindgen_ty_1__bindgen_ty_1>()
-               , 32usize);
-    assert_eq!(::core::mem::align_of::<_MCA_EXCEPTION__bindgen_ty_1__bindgen_ty_1>()
-               , 8usize);
+    assert_eq!(::core::mem::size_of::<_MCA_EXCEPTION__bindgen_ty_1__bindgen_ty_1>(),
+               32usize);
+    assert_eq!(::core::mem::align_of::<_MCA_EXCEPTION__bindgen_ty_1__bindgen_ty_1>(),
+               8usize);
 }
 impl Clone for _MCA_EXCEPTION__bindgen_ty_1__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -5690,31 +5915,37 @@ pub struct _MCA_EXCEPTION__bindgen_ty_1__bindgen_ty_2 {
 }
 #[test]
 fn bindgen_test_layout__MCA_EXCEPTION__bindgen_ty_1__bindgen_ty_2() {
-    assert_eq!(::core::mem::size_of::<_MCA_EXCEPTION__bindgen_ty_1__bindgen_ty_2>()
-               , 16usize);
-    assert_eq!(::core::mem::align_of::<_MCA_EXCEPTION__bindgen_ty_1__bindgen_ty_2>()
-               , 8usize);
+    assert_eq!(::core::mem::size_of::<_MCA_EXCEPTION__bindgen_ty_1__bindgen_ty_2>(),
+               16usize);
+    assert_eq!(::core::mem::align_of::<_MCA_EXCEPTION__bindgen_ty_1__bindgen_ty_2>(),
+               8usize);
 }
 impl Clone for _MCA_EXCEPTION__bindgen_ty_1__bindgen_ty_2 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[test]
 fn bindgen_test_layout__MCA_EXCEPTION__bindgen_ty_1() {
-    assert_eq!(::core::mem::size_of::<_MCA_EXCEPTION__bindgen_ty_1>() ,
+    assert_eq!(::core::mem::size_of::<_MCA_EXCEPTION__bindgen_ty_1>(),
                32usize);
-    assert_eq!(::core::mem::align_of::<_MCA_EXCEPTION__bindgen_ty_1>() ,
+    assert_eq!(::core::mem::align_of::<_MCA_EXCEPTION__bindgen_ty_1>(),
                8usize);
 }
 impl Clone for _MCA_EXCEPTION__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[test]
 fn bindgen_test_layout__MCA_EXCEPTION() {
-    assert_eq!(::core::mem::size_of::<_MCA_EXCEPTION>() , 256usize);
-    assert_eq!(::core::mem::align_of::<_MCA_EXCEPTION>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_MCA_EXCEPTION>(), 256usize);
+    assert_eq!(::core::mem::align_of::<_MCA_EXCEPTION>(), 8usize);
 }
 impl Clone for _MCA_EXCEPTION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_MCA_EXCEPTION as MCA_EXCEPTION;
 pub type PMCA_EXCEPTION = *mut _MCA_EXCEPTION;
@@ -5735,11 +5966,13 @@ pub struct _KSYSTEM_TIME {
 }
 #[test]
 fn bindgen_test_layout__KSYSTEM_TIME() {
-    assert_eq!(::core::mem::size_of::<_KSYSTEM_TIME>() , 12usize);
-    assert_eq!(::core::mem::align_of::<_KSYSTEM_TIME>() , 4usize);
+    assert_eq!(::core::mem::size_of::<_KSYSTEM_TIME>(), 12usize);
+    assert_eq!(::core::mem::align_of::<_KSYSTEM_TIME>(), 4usize);
 }
 impl Clone for _KSYSTEM_TIME {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_KSYSTEM_TIME as KSYSTEM_TIME;
 pub type PKSYSTEM_TIME = *mut _KSYSTEM_TIME;
@@ -5778,11 +6011,13 @@ pub struct _KSPIN_LOCK_QUEUE {
 }
 #[test]
 fn bindgen_test_layout__KSPIN_LOCK_QUEUE() {
-    assert_eq!(::core::mem::size_of::<_KSPIN_LOCK_QUEUE>() , 16usize);
-    assert_eq!(::core::mem::align_of::<_KSPIN_LOCK_QUEUE>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_KSPIN_LOCK_QUEUE>(), 16usize);
+    assert_eq!(::core::mem::align_of::<_KSPIN_LOCK_QUEUE>(), 8usize);
 }
 impl Clone for _KSPIN_LOCK_QUEUE {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_KSPIN_LOCK_QUEUE as KSPIN_LOCK_QUEUE;
 pub type PKSPIN_LOCK_QUEUE = *mut _KSPIN_LOCK_QUEUE;
@@ -5794,11 +6029,13 @@ pub struct _KLOCK_QUEUE_HANDLE {
 }
 #[test]
 fn bindgen_test_layout__KLOCK_QUEUE_HANDLE() {
-    assert_eq!(::core::mem::size_of::<_KLOCK_QUEUE_HANDLE>() , 24usize);
-    assert_eq!(::core::mem::align_of::<_KLOCK_QUEUE_HANDLE>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_KLOCK_QUEUE_HANDLE>(), 24usize);
+    assert_eq!(::core::mem::align_of::<_KLOCK_QUEUE_HANDLE>(), 8usize);
 }
 impl Clone for _KLOCK_QUEUE_HANDLE {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_KLOCK_QUEUE_HANDLE as KLOCK_QUEUE_HANDLE;
 pub type PKLOCK_QUEUE_HANDLE = *mut _KLOCK_QUEUE_HANDLE;
@@ -5839,7 +6076,9 @@ pub struct _M128A {
     pub High: LONGLONG,
 }
 impl Clone for _M128A {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_M128A as M128A;
 pub type PM128A = *mut _M128A;
@@ -5872,7 +6111,9 @@ pub struct _XSAVE_AREA_HEADER {
     pub Reserved2: [ULONG64; 6usize],
 }
 impl Clone for _XSAVE_AREA_HEADER {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_XSAVE_AREA_HEADER as XSAVE_AREA_HEADER;
 pub type PXSAVE_AREA_HEADER = *mut _XSAVE_AREA_HEADER;
@@ -5896,11 +6137,13 @@ pub struct _XSTATE_CONTEXT {
 }
 #[test]
 fn bindgen_test_layout__XSTATE_CONTEXT() {
-    assert_eq!(::core::mem::size_of::<_XSTATE_CONTEXT>() , 48usize);
-    assert_eq!(::core::mem::align_of::<_XSTATE_CONTEXT>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_XSTATE_CONTEXT>(), 48usize);
+    assert_eq!(::core::mem::align_of::<_XSTATE_CONTEXT>(), 8usize);
 }
 impl Clone for _XSTATE_CONTEXT {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_XSTATE_CONTEXT as XSTATE_CONTEXT;
 pub type PXSTATE_CONTEXT = *mut _XSTATE_CONTEXT;
@@ -5921,11 +6164,13 @@ pub struct _GENERIC_MAPPING {
 }
 #[test]
 fn bindgen_test_layout__GENERIC_MAPPING() {
-    assert_eq!(::core::mem::size_of::<_GENERIC_MAPPING>() , 16usize);
-    assert_eq!(::core::mem::align_of::<_GENERIC_MAPPING>() , 4usize);
+    assert_eq!(::core::mem::size_of::<_GENERIC_MAPPING>(), 16usize);
+    assert_eq!(::core::mem::align_of::<_GENERIC_MAPPING>(), 4usize);
 }
 impl Clone for _GENERIC_MAPPING {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_GENERIC_MAPPING as GENERIC_MAPPING;
 pub type PGENERIC_MAPPING = *mut GENERIC_MAPPING;
@@ -5936,7 +6181,9 @@ pub struct _LUID_AND_ATTRIBUTES {
     pub Attributes: ULONG,
 }
 impl Clone for _LUID_AND_ATTRIBUTES {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_LUID_AND_ATTRIBUTES as LUID_AND_ATTRIBUTES;
 pub type PLUID_AND_ATTRIBUTES = *mut _LUID_AND_ATTRIBUTES;
@@ -5953,11 +6200,13 @@ pub struct _ACL {
 }
 #[test]
 fn bindgen_test_layout__ACL() {
-    assert_eq!(::core::mem::size_of::<_ACL>() , 8usize);
-    assert_eq!(::core::mem::align_of::<_ACL>() , 2usize);
+    assert_eq!(::core::mem::size_of::<_ACL>(), 8usize);
+    assert_eq!(::core::mem::align_of::<_ACL>(), 2usize);
 }
 impl Clone for _ACL {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_ACL as ACL;
 pub type PACL = *mut ACL;
@@ -5970,11 +6219,13 @@ pub struct _PRIVILEGE_SET {
 }
 #[test]
 fn bindgen_test_layout__PRIVILEGE_SET() {
-    assert_eq!(::core::mem::size_of::<_PRIVILEGE_SET>() , 20usize);
-    assert_eq!(::core::mem::align_of::<_PRIVILEGE_SET>() , 4usize);
+    assert_eq!(::core::mem::size_of::<_PRIVILEGE_SET>(), 20usize);
+    assert_eq!(::core::mem::align_of::<_PRIVILEGE_SET>(), 4usize);
 }
 impl Clone for _PRIVILEGE_SET {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_PRIVILEGE_SET as PRIVILEGE_SET;
 pub type PPRIVILEGE_SET = *mut _PRIVILEGE_SET;
@@ -6001,18 +6252,20 @@ pub struct _SE_IMPERSONATION_STATE {
 }
 #[test]
 fn bindgen_test_layout__SE_IMPERSONATION_STATE() {
-    assert_eq!(::core::mem::size_of::<_SE_IMPERSONATION_STATE>() , 16usize);
-    assert_eq!(::core::mem::align_of::<_SE_IMPERSONATION_STATE>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_SE_IMPERSONATION_STATE>(), 16usize);
+    assert_eq!(::core::mem::align_of::<_SE_IMPERSONATION_STATE>(), 8usize);
 }
 impl Clone for _SE_IMPERSONATION_STATE {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_SE_IMPERSONATION_STATE as SE_IMPERSONATION_STATE;
 pub type PSE_IMPERSONATION_STATE = *mut _SE_IMPERSONATION_STATE;
 pub type SECURITY_INFORMATION = ULONG;
 pub type PSECURITY_INFORMATION = *mut ULONG;
 #[repr(i32)]
-/////////////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////////
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub enum _SE_ADT_PARAMETER_TYPE {
     SeAdtParmTypeNone = 0,
@@ -6064,11 +6317,13 @@ pub struct _SE_ADT_OBJECT_TYPE {
 }
 #[test]
 fn bindgen_test_layout__SE_ADT_OBJECT_TYPE() {
-    assert_eq!(::core::mem::size_of::<_SE_ADT_OBJECT_TYPE>() , 24usize);
-    assert_eq!(::core::mem::align_of::<_SE_ADT_OBJECT_TYPE>() , 4usize);
+    assert_eq!(::core::mem::size_of::<_SE_ADT_OBJECT_TYPE>(), 24usize);
+    assert_eq!(::core::mem::align_of::<_SE_ADT_OBJECT_TYPE>(), 4usize);
 }
 impl Clone for _SE_ADT_OBJECT_TYPE {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_SE_ADT_OBJECT_TYPE as SE_ADT_OBJECT_TYPE;
 pub type PSE_ADT_OBJECT_TYPE = *mut _SE_ADT_OBJECT_TYPE;
@@ -6082,13 +6337,15 @@ pub struct _SE_ADT_PARAMETER_ARRAY_ENTRY {
 }
 #[test]
 fn bindgen_test_layout__SE_ADT_PARAMETER_ARRAY_ENTRY() {
-    assert_eq!(::core::mem::size_of::<_SE_ADT_PARAMETER_ARRAY_ENTRY>() ,
+    assert_eq!(::core::mem::size_of::<_SE_ADT_PARAMETER_ARRAY_ENTRY>(),
                32usize);
-    assert_eq!(::core::mem::align_of::<_SE_ADT_PARAMETER_ARRAY_ENTRY>() ,
+    assert_eq!(::core::mem::align_of::<_SE_ADT_PARAMETER_ARRAY_ENTRY>(),
                8usize);
 }
 impl Clone for _SE_ADT_PARAMETER_ARRAY_ENTRY {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_SE_ADT_PARAMETER_ARRAY_ENTRY as SE_ADT_PARAMETER_ARRAY_ENTRY;
 pub type PSE_ADT_PARAMETER_ARRAY_ENTRY = *mut _SE_ADT_PARAMETER_ARRAY_ENTRY;
@@ -6103,11 +6360,13 @@ pub struct _SE_ADT_ACCESS_REASON {
 }
 #[test]
 fn bindgen_test_layout__SE_ADT_ACCESS_REASON() {
-    assert_eq!(::core::mem::size_of::<_SE_ADT_ACCESS_REASON>() , 152usize);
-    assert_eq!(::core::mem::align_of::<_SE_ADT_ACCESS_REASON>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_SE_ADT_ACCESS_REASON>(), 152usize);
+    assert_eq!(::core::mem::align_of::<_SE_ADT_ACCESS_REASON>(), 8usize);
 }
 impl Clone for _SE_ADT_ACCESS_REASON {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_SE_ADT_ACCESS_REASON as SE_ADT_ACCESS_REASON;
 pub type PSE_ADT_ACCESS_REASON = *mut _SE_ADT_ACCESS_REASON;
@@ -6119,11 +6378,13 @@ pub struct _SE_ADT_CLAIMS {
 }
 #[test]
 fn bindgen_test_layout__SE_ADT_CLAIMS() {
-    assert_eq!(::core::mem::size_of::<_SE_ADT_CLAIMS>() , 16usize);
-    assert_eq!(::core::mem::align_of::<_SE_ADT_CLAIMS>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_SE_ADT_CLAIMS>(), 16usize);
+    assert_eq!(::core::mem::align_of::<_SE_ADT_CLAIMS>(), 8usize);
 }
 impl Clone for _SE_ADT_CLAIMS {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_SE_ADT_CLAIMS as SE_ADT_CLAIMS;
 pub type PSE_ADT_CLAIMS = *mut _SE_ADT_CLAIMS;
@@ -6141,11 +6402,13 @@ pub struct _SE_ADT_PARAMETER_ARRAY {
 }
 #[test]
 fn bindgen_test_layout__SE_ADT_PARAMETER_ARRAY() {
-    assert_eq!(::core::mem::size_of::<_SE_ADT_PARAMETER_ARRAY>() , 1048usize);
-    assert_eq!(::core::mem::align_of::<_SE_ADT_PARAMETER_ARRAY>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_SE_ADT_PARAMETER_ARRAY>(), 1048usize);
+    assert_eq!(::core::mem::align_of::<_SE_ADT_PARAMETER_ARRAY>(), 8usize);
 }
 impl Clone for _SE_ADT_PARAMETER_ARRAY {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_SE_ADT_PARAMETER_ARRAY as SE_ADT_PARAMETER_ARRAY;
 pub type PSE_ADT_PARAMETER_ARRAY = *mut _SE_ADT_PARAMETER_ARRAY;
@@ -6164,13 +6427,15 @@ pub struct _SE_ADT_PARAMETER_ARRAY_EX {
 }
 #[test]
 fn bindgen_test_layout__SE_ADT_PARAMETER_ARRAY_EX() {
-    assert_eq!(::core::mem::size_of::<_SE_ADT_PARAMETER_ARRAY_EX>() ,
+    assert_eq!(::core::mem::size_of::<_SE_ADT_PARAMETER_ARRAY_EX>(),
                1056usize);
-    assert_eq!(::core::mem::align_of::<_SE_ADT_PARAMETER_ARRAY_EX>() ,
+    assert_eq!(::core::mem::align_of::<_SE_ADT_PARAMETER_ARRAY_EX>(),
                8usize);
 }
 impl Clone for _SE_ADT_PARAMETER_ARRAY_EX {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_SE_ADT_PARAMETER_ARRAY_EX as SE_ADT_PARAMETER_ARRAY_EX;
 pub type PSE_ADT_PARAMETER_ARRAY_EX = *mut _SE_ADT_PARAMETER_ARRAY_EX;
@@ -6189,21 +6454,25 @@ pub struct _IO_STATUS_BLOCK__bindgen_ty_1 {
 }
 #[test]
 fn bindgen_test_layout__IO_STATUS_BLOCK__bindgen_ty_1() {
-    assert_eq!(::core::mem::size_of::<_IO_STATUS_BLOCK__bindgen_ty_1>() ,
+    assert_eq!(::core::mem::size_of::<_IO_STATUS_BLOCK__bindgen_ty_1>(),
                8usize);
-    assert_eq!(::core::mem::align_of::<_IO_STATUS_BLOCK__bindgen_ty_1>() ,
+    assert_eq!(::core::mem::align_of::<_IO_STATUS_BLOCK__bindgen_ty_1>(),
                8usize);
 }
 impl Clone for _IO_STATUS_BLOCK__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[test]
 fn bindgen_test_layout__IO_STATUS_BLOCK() {
-    assert_eq!(::core::mem::size_of::<_IO_STATUS_BLOCK>() , 16usize);
-    assert_eq!(::core::mem::align_of::<_IO_STATUS_BLOCK>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_IO_STATUS_BLOCK>(), 16usize);
+    assert_eq!(::core::mem::align_of::<_IO_STATUS_BLOCK>(), 8usize);
 }
 impl Clone for _IO_STATUS_BLOCK {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_IO_STATUS_BLOCK as IO_STATUS_BLOCK;
 pub type PIO_STATUS_BLOCK = *mut _IO_STATUS_BLOCK;
@@ -6215,19 +6484,20 @@ pub struct _IO_STATUS_BLOCK32 {
 }
 #[test]
 fn bindgen_test_layout__IO_STATUS_BLOCK32() {
-    assert_eq!(::core::mem::size_of::<_IO_STATUS_BLOCK32>() , 8usize);
-    assert_eq!(::core::mem::align_of::<_IO_STATUS_BLOCK32>() , 4usize);
+    assert_eq!(::core::mem::size_of::<_IO_STATUS_BLOCK32>(), 8usize);
+    assert_eq!(::core::mem::align_of::<_IO_STATUS_BLOCK32>(), 4usize);
 }
 impl Clone for _IO_STATUS_BLOCK32 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_IO_STATUS_BLOCK32 as IO_STATUS_BLOCK32;
 pub type PIO_STATUS_BLOCK32 = *mut _IO_STATUS_BLOCK32;
 pub type PIO_APC_ROUTINE =
     ::core::option::Option<unsafe extern "C" fn(ApcContext: PVOID,
-                                                IoStatusBlock:
-                                                    PIO_STATUS_BLOCK,
-                                                Reserved: ULONG)>;
+                                                  IoStatusBlock: PIO_STATUS_BLOCK,
+                                                  Reserved: ULONG)>;
 #[repr(i32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub enum _IO_SESSION_EVENT {
@@ -6265,11 +6535,13 @@ pub struct _IO_SESSION_CONNECT_INFO {
 }
 #[test]
 fn bindgen_test_layout__IO_SESSION_CONNECT_INFO() {
-    assert_eq!(::core::mem::size_of::<_IO_SESSION_CONNECT_INFO>() , 8usize);
-    assert_eq!(::core::mem::align_of::<_IO_SESSION_CONNECT_INFO>() , 4usize);
+    assert_eq!(::core::mem::size_of::<_IO_SESSION_CONNECT_INFO>(), 8usize);
+    assert_eq!(::core::mem::align_of::<_IO_SESSION_CONNECT_INFO>(), 4usize);
 }
 impl Clone for _IO_SESSION_CONNECT_INFO {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_IO_SESSION_CONNECT_INFO as IO_SESSION_CONNECT_INFO;
 pub type PIO_SESSION_CONNECT_INFO = *mut _IO_SESSION_CONNECT_INFO;
@@ -6357,11 +6629,13 @@ pub struct _FILE_BASIC_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__FILE_BASIC_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_FILE_BASIC_INFORMATION>() , 40usize);
-    assert_eq!(::core::mem::align_of::<_FILE_BASIC_INFORMATION>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_FILE_BASIC_INFORMATION>(), 40usize);
+    assert_eq!(::core::mem::align_of::<_FILE_BASIC_INFORMATION>(), 8usize);
 }
 impl Clone for _FILE_BASIC_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_FILE_BASIC_INFORMATION as FILE_BASIC_INFORMATION;
 pub type PFILE_BASIC_INFORMATION = *mut _FILE_BASIC_INFORMATION;
@@ -6376,13 +6650,15 @@ pub struct _FILE_STANDARD_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__FILE_STANDARD_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_FILE_STANDARD_INFORMATION>() ,
+    assert_eq!(::core::mem::size_of::<_FILE_STANDARD_INFORMATION>(),
                24usize);
-    assert_eq!(::core::mem::align_of::<_FILE_STANDARD_INFORMATION>() ,
+    assert_eq!(::core::mem::align_of::<_FILE_STANDARD_INFORMATION>(),
                8usize);
 }
 impl Clone for _FILE_STANDARD_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_FILE_STANDARD_INFORMATION as FILE_STANDARD_INFORMATION;
 pub type PFILE_STANDARD_INFORMATION = *mut _FILE_STANDARD_INFORMATION;
@@ -6399,13 +6675,15 @@ pub struct _FILE_STANDARD_INFORMATION_EX {
 }
 #[test]
 fn bindgen_test_layout__FILE_STANDARD_INFORMATION_EX() {
-    assert_eq!(::core::mem::size_of::<_FILE_STANDARD_INFORMATION_EX>() ,
+    assert_eq!(::core::mem::size_of::<_FILE_STANDARD_INFORMATION_EX>(),
                24usize);
-    assert_eq!(::core::mem::align_of::<_FILE_STANDARD_INFORMATION_EX>() ,
+    assert_eq!(::core::mem::align_of::<_FILE_STANDARD_INFORMATION_EX>(),
                8usize);
 }
 impl Clone for _FILE_STANDARD_INFORMATION_EX {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_FILE_STANDARD_INFORMATION_EX as FILE_STANDARD_INFORMATION_EX;
 pub type PFILE_STANDARD_INFORMATION_EX = *mut _FILE_STANDARD_INFORMATION_EX;
@@ -6416,12 +6694,14 @@ pub struct _FILE_POSITION_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__FILE_POSITION_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_FILE_POSITION_INFORMATION>() , 8usize);
-    assert_eq!(::core::mem::align_of::<_FILE_POSITION_INFORMATION>() ,
+    assert_eq!(::core::mem::size_of::<_FILE_POSITION_INFORMATION>(), 8usize);
+    assert_eq!(::core::mem::align_of::<_FILE_POSITION_INFORMATION>(),
                8usize);
 }
 impl Clone for _FILE_POSITION_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_FILE_POSITION_INFORMATION as FILE_POSITION_INFORMATION;
 pub type PFILE_POSITION_INFORMATION = *mut _FILE_POSITION_INFORMATION;
@@ -6438,13 +6718,15 @@ pub struct _FILE_NETWORK_OPEN_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__FILE_NETWORK_OPEN_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_FILE_NETWORK_OPEN_INFORMATION>() ,
+    assert_eq!(::core::mem::size_of::<_FILE_NETWORK_OPEN_INFORMATION>(),
                56usize);
-    assert_eq!(::core::mem::align_of::<_FILE_NETWORK_OPEN_INFORMATION>() ,
+    assert_eq!(::core::mem::align_of::<_FILE_NETWORK_OPEN_INFORMATION>(),
                8usize);
 }
 impl Clone for _FILE_NETWORK_OPEN_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_FILE_NETWORK_OPEN_INFORMATION as FILE_NETWORK_OPEN_INFORMATION;
 pub type PFILE_NETWORK_OPEN_INFORMATION = *mut _FILE_NETWORK_OPEN_INFORMATION;
@@ -6459,11 +6741,13 @@ pub struct _FILE_FULL_EA_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__FILE_FULL_EA_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_FILE_FULL_EA_INFORMATION>() , 12usize);
-    assert_eq!(::core::mem::align_of::<_FILE_FULL_EA_INFORMATION>() , 4usize);
+    assert_eq!(::core::mem::size_of::<_FILE_FULL_EA_INFORMATION>(), 12usize);
+    assert_eq!(::core::mem::align_of::<_FILE_FULL_EA_INFORMATION>(), 4usize);
 }
 impl Clone for _FILE_FULL_EA_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_FILE_FULL_EA_INFORMATION as FILE_FULL_EA_INFORMATION;
 pub type PFILE_FULL_EA_INFORMATION = *mut _FILE_FULL_EA_INFORMATION;
@@ -6479,13 +6763,15 @@ pub struct _FILE_SFIO_RESERVE_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__FILE_SFIO_RESERVE_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_FILE_SFIO_RESERVE_INFORMATION>() ,
+    assert_eq!(::core::mem::size_of::<_FILE_SFIO_RESERVE_INFORMATION>(),
                20usize);
-    assert_eq!(::core::mem::align_of::<_FILE_SFIO_RESERVE_INFORMATION>() ,
+    assert_eq!(::core::mem::align_of::<_FILE_SFIO_RESERVE_INFORMATION>(),
                4usize);
 }
 impl Clone for _FILE_SFIO_RESERVE_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_FILE_SFIO_RESERVE_INFORMATION as FILE_SFIO_RESERVE_INFORMATION;
 pub type PFILE_SFIO_RESERVE_INFORMATION = *mut _FILE_SFIO_RESERVE_INFORMATION;
@@ -6498,13 +6784,15 @@ pub struct _FILE_SFIO_VOLUME_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__FILE_SFIO_VOLUME_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_FILE_SFIO_VOLUME_INFORMATION>() ,
+    assert_eq!(::core::mem::size_of::<_FILE_SFIO_VOLUME_INFORMATION>(),
                12usize);
-    assert_eq!(::core::mem::align_of::<_FILE_SFIO_VOLUME_INFORMATION>() ,
+    assert_eq!(::core::mem::align_of::<_FILE_SFIO_VOLUME_INFORMATION>(),
                4usize);
 }
 impl Clone for _FILE_SFIO_VOLUME_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_FILE_SFIO_VOLUME_INFORMATION as FILE_SFIO_VOLUME_INFORMATION;
 pub type PFILE_SFIO_VOLUME_INFORMATION = *mut _FILE_SFIO_VOLUME_INFORMATION;
@@ -6526,18 +6814,18 @@ pub struct _FILE_IO_PRIORITY_HINT_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__FILE_IO_PRIORITY_HINT_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_FILE_IO_PRIORITY_HINT_INFORMATION>() ,
+    assert_eq!(::core::mem::size_of::<_FILE_IO_PRIORITY_HINT_INFORMATION>(),
                4usize);
-    assert_eq!(::core::mem::align_of::<_FILE_IO_PRIORITY_HINT_INFORMATION>() ,
+    assert_eq!(::core::mem::align_of::<_FILE_IO_PRIORITY_HINT_INFORMATION>(),
                4usize);
 }
 impl Clone for _FILE_IO_PRIORITY_HINT_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
-pub use self::_FILE_IO_PRIORITY_HINT_INFORMATION as
-        FILE_IO_PRIORITY_HINT_INFORMATION;
-pub type PFILE_IO_PRIORITY_HINT_INFORMATION =
-    *mut _FILE_IO_PRIORITY_HINT_INFORMATION;
+pub use self::_FILE_IO_PRIORITY_HINT_INFORMATION as FILE_IO_PRIORITY_HINT_INFORMATION;
+pub type PFILE_IO_PRIORITY_HINT_INFORMATION = *mut _FILE_IO_PRIORITY_HINT_INFORMATION;
 #[repr(C)]
 #[derive(Debug, Copy)]
 pub struct _FILE_IO_PRIORITY_HINT_INFORMATION_EX {
@@ -6546,18 +6834,18 @@ pub struct _FILE_IO_PRIORITY_HINT_INFORMATION_EX {
 }
 #[test]
 fn bindgen_test_layout__FILE_IO_PRIORITY_HINT_INFORMATION_EX() {
-    assert_eq!(::core::mem::size_of::<_FILE_IO_PRIORITY_HINT_INFORMATION_EX>()
-               , 8usize);
-    assert_eq!(::core::mem::align_of::<_FILE_IO_PRIORITY_HINT_INFORMATION_EX>()
-               , 4usize);
+    assert_eq!(::core::mem::size_of::<_FILE_IO_PRIORITY_HINT_INFORMATION_EX>(),
+               8usize);
+    assert_eq!(::core::mem::align_of::<_FILE_IO_PRIORITY_HINT_INFORMATION_EX>(),
+               4usize);
 }
 impl Clone for _FILE_IO_PRIORITY_HINT_INFORMATION_EX {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
-pub use self::_FILE_IO_PRIORITY_HINT_INFORMATION_EX as
-        FILE_IO_PRIORITY_HINT_INFORMATION_EX;
-pub type PFILE_IO_PRIORITY_HINT_INFORMATION_EX =
-    *mut _FILE_IO_PRIORITY_HINT_INFORMATION_EX;
+pub use self::_FILE_IO_PRIORITY_HINT_INFORMATION_EX as FILE_IO_PRIORITY_HINT_INFORMATION_EX;
+pub type PFILE_IO_PRIORITY_HINT_INFORMATION_EX = *mut _FILE_IO_PRIORITY_HINT_INFORMATION_EX;
 #[repr(C)]
 #[derive(Debug, Copy)]
 pub struct _FILE_IO_COMPLETION_NOTIFICATION_INFORMATION {
@@ -6565,13 +6853,15 @@ pub struct _FILE_IO_COMPLETION_NOTIFICATION_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__FILE_IO_COMPLETION_NOTIFICATION_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_FILE_IO_COMPLETION_NOTIFICATION_INFORMATION>()
-               , 4usize);
-    assert_eq!(::core::mem::align_of::<_FILE_IO_COMPLETION_NOTIFICATION_INFORMATION>()
-               , 4usize);
+    assert_eq!(::core::mem::size_of::<_FILE_IO_COMPLETION_NOTIFICATION_INFORMATION>(),
+               4usize);
+    assert_eq!(::core::mem::align_of::<_FILE_IO_COMPLETION_NOTIFICATION_INFORMATION>(),
+               4usize);
 }
 impl Clone for _FILE_IO_COMPLETION_NOTIFICATION_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_FILE_IO_COMPLETION_NOTIFICATION_INFORMATION as
         FILE_IO_COMPLETION_NOTIFICATION_INFORMATION;
@@ -6585,18 +6875,18 @@ pub struct _FILE_PROCESS_IDS_USING_FILE_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__FILE_PROCESS_IDS_USING_FILE_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_FILE_PROCESS_IDS_USING_FILE_INFORMATION>()
-               , 16usize);
-    assert_eq!(::core::mem::align_of::<_FILE_PROCESS_IDS_USING_FILE_INFORMATION>()
-               , 8usize);
+    assert_eq!(::core::mem::size_of::<_FILE_PROCESS_IDS_USING_FILE_INFORMATION>(),
+               16usize);
+    assert_eq!(::core::mem::align_of::<_FILE_PROCESS_IDS_USING_FILE_INFORMATION>(),
+               8usize);
 }
 impl Clone for _FILE_PROCESS_IDS_USING_FILE_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
-pub use self::_FILE_PROCESS_IDS_USING_FILE_INFORMATION as
-        FILE_PROCESS_IDS_USING_FILE_INFORMATION;
-pub type PFILE_PROCESS_IDS_USING_FILE_INFORMATION =
-    *mut _FILE_PROCESS_IDS_USING_FILE_INFORMATION;
+pub use self::_FILE_PROCESS_IDS_USING_FILE_INFORMATION as FILE_PROCESS_IDS_USING_FILE_INFORMATION;
+pub type PFILE_PROCESS_IDS_USING_FILE_INFORMATION = *mut _FILE_PROCESS_IDS_USING_FILE_INFORMATION;
 #[repr(C)]
 #[derive(Debug, Copy)]
 pub struct _FILE_IS_REMOTE_DEVICE_INFORMATION {
@@ -6604,18 +6894,18 @@ pub struct _FILE_IS_REMOTE_DEVICE_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__FILE_IS_REMOTE_DEVICE_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_FILE_IS_REMOTE_DEVICE_INFORMATION>() ,
+    assert_eq!(::core::mem::size_of::<_FILE_IS_REMOTE_DEVICE_INFORMATION>(),
                1usize);
-    assert_eq!(::core::mem::align_of::<_FILE_IS_REMOTE_DEVICE_INFORMATION>() ,
+    assert_eq!(::core::mem::align_of::<_FILE_IS_REMOTE_DEVICE_INFORMATION>(),
                1usize);
 }
 impl Clone for _FILE_IS_REMOTE_DEVICE_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
-pub use self::_FILE_IS_REMOTE_DEVICE_INFORMATION as
-        FILE_IS_REMOTE_DEVICE_INFORMATION;
-pub type PFILE_IS_REMOTE_DEVICE_INFORMATION =
-    *mut _FILE_IS_REMOTE_DEVICE_INFORMATION;
+pub use self::_FILE_IS_REMOTE_DEVICE_INFORMATION as FILE_IS_REMOTE_DEVICE_INFORMATION;
+pub type PFILE_IS_REMOTE_DEVICE_INFORMATION = *mut _FILE_IS_REMOTE_DEVICE_INFORMATION;
 #[repr(C)]
 #[derive(Debug, Copy)]
 pub struct _FILE_NUMA_NODE_INFORMATION {
@@ -6623,13 +6913,15 @@ pub struct _FILE_NUMA_NODE_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__FILE_NUMA_NODE_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_FILE_NUMA_NODE_INFORMATION>() ,
+    assert_eq!(::core::mem::size_of::<_FILE_NUMA_NODE_INFORMATION>(),
                2usize);
-    assert_eq!(::core::mem::align_of::<_FILE_NUMA_NODE_INFORMATION>() ,
+    assert_eq!(::core::mem::align_of::<_FILE_NUMA_NODE_INFORMATION>(),
                2usize);
 }
 impl Clone for _FILE_NUMA_NODE_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_FILE_NUMA_NODE_INFORMATION as FILE_NUMA_NODE_INFORMATION;
 pub type PFILE_NUMA_NODE_INFORMATION = *mut _FILE_NUMA_NODE_INFORMATION;
@@ -6641,18 +6933,18 @@ pub struct _FILE_IOSTATUSBLOCK_RANGE_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__FILE_IOSTATUSBLOCK_RANGE_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_FILE_IOSTATUSBLOCK_RANGE_INFORMATION>()
-               , 16usize);
-    assert_eq!(::core::mem::align_of::<_FILE_IOSTATUSBLOCK_RANGE_INFORMATION>()
-               , 8usize);
+    assert_eq!(::core::mem::size_of::<_FILE_IOSTATUSBLOCK_RANGE_INFORMATION>(),
+               16usize);
+    assert_eq!(::core::mem::align_of::<_FILE_IOSTATUSBLOCK_RANGE_INFORMATION>(),
+               8usize);
 }
 impl Clone for _FILE_IOSTATUSBLOCK_RANGE_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
-pub use self::_FILE_IOSTATUSBLOCK_RANGE_INFORMATION as
-        FILE_IOSTATUSBLOCK_RANGE_INFORMATION;
-pub type PFILE_IOSTATUSBLOCK_RANGE_INFORMATION =
-    *mut _FILE_IOSTATUSBLOCK_RANGE_INFORMATION;
+pub use self::_FILE_IOSTATUSBLOCK_RANGE_INFORMATION as FILE_IOSTATUSBLOCK_RANGE_INFORMATION;
+pub type PFILE_IOSTATUSBLOCK_RANGE_INFORMATION = *mut _FILE_IOSTATUSBLOCK_RANGE_INFORMATION;
 #[repr(i32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub enum _FSINFOCLASS {
@@ -6681,13 +6973,15 @@ pub struct _FILE_FS_DEVICE_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__FILE_FS_DEVICE_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_FILE_FS_DEVICE_INFORMATION>() ,
+    assert_eq!(::core::mem::size_of::<_FILE_FS_DEVICE_INFORMATION>(),
                8usize);
-    assert_eq!(::core::mem::align_of::<_FILE_FS_DEVICE_INFORMATION>() ,
+    assert_eq!(::core::mem::align_of::<_FILE_FS_DEVICE_INFORMATION>(),
                4usize);
 }
 impl Clone for _FILE_FS_DEVICE_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_FILE_FS_DEVICE_INFORMATION as FILE_FS_DEVICE_INFORMATION;
 pub type PFILE_FS_DEVICE_INFORMATION = *mut _FILE_FS_DEVICE_INFORMATION;
@@ -6700,11 +6994,13 @@ pub struct _FILE_SEGMENT_ELEMENT {
 }
 #[test]
 fn bindgen_test_layout__FILE_SEGMENT_ELEMENT() {
-    assert_eq!(::core::mem::size_of::<_FILE_SEGMENT_ELEMENT>() , 8usize);
-    assert_eq!(::core::mem::align_of::<_FILE_SEGMENT_ELEMENT>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_FILE_SEGMENT_ELEMENT>(), 8usize);
+    assert_eq!(::core::mem::align_of::<_FILE_SEGMENT_ELEMENT>(), 8usize);
 }
 impl Clone for _FILE_SEGMENT_ELEMENT {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_FILE_SEGMENT_ELEMENT as FILE_SEGMENT_ELEMENT;
 pub type PFILE_SEGMENT_ELEMENT = *mut _FILE_SEGMENT_ELEMENT;
@@ -6758,10 +7054,8 @@ pub enum _DMA_SPEED {
 }
 pub use self::_DMA_SPEED as DMA_SPEED;
 pub type PDMA_SPEED = *mut _DMA_SPEED;
-pub type PINTERFACE_REFERENCE =
-    ::core::option::Option<unsafe extern "C" fn(Context: PVOID)>;
-pub type PINTERFACE_DEREFERENCE =
-    ::core::option::Option<unsafe extern "C" fn(Context: PVOID)>;
+pub type PINTERFACE_REFERENCE = ::core::option::Option<unsafe extern "C" fn(Context: PVOID)>;
+pub type PINTERFACE_DEREFERENCE = ::core::option::Option<unsafe extern "C" fn(Context: PVOID)>;
 #[repr(C)]
 #[derive(Debug, Copy)]
 pub struct _IO_ERROR_LOG_PACKET {
@@ -6781,11 +7075,13 @@ pub struct _IO_ERROR_LOG_PACKET {
 }
 #[test]
 fn bindgen_test_layout__IO_ERROR_LOG_PACKET() {
-    assert_eq!(::core::mem::size_of::<_IO_ERROR_LOG_PACKET>() , 48usize);
-    assert_eq!(::core::mem::align_of::<_IO_ERROR_LOG_PACKET>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_IO_ERROR_LOG_PACKET>(), 48usize);
+    assert_eq!(::core::mem::align_of::<_IO_ERROR_LOG_PACKET>(), 8usize);
 }
 impl Clone for _IO_ERROR_LOG_PACKET {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_IO_ERROR_LOG_PACKET as IO_ERROR_LOG_PACKET;
 pub type PIO_ERROR_LOG_PACKET = *mut _IO_ERROR_LOG_PACKET;
@@ -6801,11 +7097,13 @@ pub struct _IO_ERROR_LOG_MESSAGE {
 }
 #[test]
 fn bindgen_test_layout__IO_ERROR_LOG_MESSAGE() {
-    assert_eq!(::core::mem::size_of::<_IO_ERROR_LOG_MESSAGE>() , 72usize);
-    assert_eq!(::core::mem::align_of::<_IO_ERROR_LOG_MESSAGE>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_IO_ERROR_LOG_MESSAGE>(), 72usize);
+    assert_eq!(::core::mem::align_of::<_IO_ERROR_LOG_MESSAGE>(), 8usize);
 }
 impl Clone for _IO_ERROR_LOG_MESSAGE {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_IO_ERROR_LOG_MESSAGE as IO_ERROR_LOG_MESSAGE;
 pub type PIO_ERROR_LOG_MESSAGE = *mut _IO_ERROR_LOG_MESSAGE;
@@ -6819,11 +7117,13 @@ pub struct _KEY_BASIC_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__KEY_BASIC_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_KEY_BASIC_INFORMATION>() , 24usize);
-    assert_eq!(::core::mem::align_of::<_KEY_BASIC_INFORMATION>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_KEY_BASIC_INFORMATION>(), 24usize);
+    assert_eq!(::core::mem::align_of::<_KEY_BASIC_INFORMATION>(), 8usize);
 }
 impl Clone for _KEY_BASIC_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_KEY_BASIC_INFORMATION as KEY_BASIC_INFORMATION;
 pub type PKEY_BASIC_INFORMATION = *mut _KEY_BASIC_INFORMATION;
@@ -6839,11 +7139,13 @@ pub struct _KEY_NODE_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__KEY_NODE_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_KEY_NODE_INFORMATION>() , 32usize);
-    assert_eq!(::core::mem::align_of::<_KEY_NODE_INFORMATION>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_KEY_NODE_INFORMATION>(), 32usize);
+    assert_eq!(::core::mem::align_of::<_KEY_NODE_INFORMATION>(), 8usize);
 }
 impl Clone for _KEY_NODE_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_KEY_NODE_INFORMATION as KEY_NODE_INFORMATION;
 pub type PKEY_NODE_INFORMATION = *mut _KEY_NODE_INFORMATION;
@@ -6864,11 +7166,13 @@ pub struct _KEY_FULL_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__KEY_FULL_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_KEY_FULL_INFORMATION>() , 48usize);
-    assert_eq!(::core::mem::align_of::<_KEY_FULL_INFORMATION>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_KEY_FULL_INFORMATION>(), 48usize);
+    assert_eq!(::core::mem::align_of::<_KEY_FULL_INFORMATION>(), 8usize);
 }
 impl Clone for _KEY_FULL_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_KEY_FULL_INFORMATION as KEY_FULL_INFORMATION;
 pub type PKEY_FULL_INFORMATION = *mut _KEY_FULL_INFORMATION;
@@ -6895,13 +7199,15 @@ pub struct _KEY_WRITE_TIME_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__KEY_WRITE_TIME_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_KEY_WRITE_TIME_INFORMATION>() ,
+    assert_eq!(::core::mem::size_of::<_KEY_WRITE_TIME_INFORMATION>(),
                8usize);
-    assert_eq!(::core::mem::align_of::<_KEY_WRITE_TIME_INFORMATION>() ,
+    assert_eq!(::core::mem::align_of::<_KEY_WRITE_TIME_INFORMATION>(),
                8usize);
 }
 impl Clone for _KEY_WRITE_TIME_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_KEY_WRITE_TIME_INFORMATION as KEY_WRITE_TIME_INFORMATION;
 pub type PKEY_WRITE_TIME_INFORMATION = *mut _KEY_WRITE_TIME_INFORMATION;
@@ -6912,13 +7218,15 @@ pub struct _KEY_WOW64_FLAGS_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__KEY_WOW64_FLAGS_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_KEY_WOW64_FLAGS_INFORMATION>() ,
+    assert_eq!(::core::mem::size_of::<_KEY_WOW64_FLAGS_INFORMATION>(),
                4usize);
-    assert_eq!(::core::mem::align_of::<_KEY_WOW64_FLAGS_INFORMATION>() ,
+    assert_eq!(::core::mem::align_of::<_KEY_WOW64_FLAGS_INFORMATION>(),
                4usize);
 }
 impl Clone for _KEY_WOW64_FLAGS_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_KEY_WOW64_FLAGS_INFORMATION as KEY_WOW64_FLAGS_INFORMATION;
 pub type PKEY_WOW64_FLAGS_INFORMATION = *mut _KEY_WOW64_FLAGS_INFORMATION;
@@ -6929,13 +7237,15 @@ pub struct _KEY_CONTROL_FLAGS_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__KEY_CONTROL_FLAGS_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_KEY_CONTROL_FLAGS_INFORMATION>() ,
+    assert_eq!(::core::mem::size_of::<_KEY_CONTROL_FLAGS_INFORMATION>(),
                4usize);
-    assert_eq!(::core::mem::align_of::<_KEY_CONTROL_FLAGS_INFORMATION>() ,
+    assert_eq!(::core::mem::align_of::<_KEY_CONTROL_FLAGS_INFORMATION>(),
                4usize);
 }
 impl Clone for _KEY_CONTROL_FLAGS_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_KEY_CONTROL_FLAGS_INFORMATION as KEY_CONTROL_FLAGS_INFORMATION;
 pub type PKEY_CONTROL_FLAGS_INFORMATION = *mut _KEY_CONTROL_FLAGS_INFORMATION;
@@ -6946,21 +7256,20 @@ pub struct _KEY_SET_VIRTUALIZATION_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__KEY_SET_VIRTUALIZATION_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_KEY_SET_VIRTUALIZATION_INFORMATION>() ,
+    assert_eq!(::core::mem::size_of::<_KEY_SET_VIRTUALIZATION_INFORMATION>(),
                4usize);
-    assert_eq!(::core::mem::align_of::<_KEY_SET_VIRTUALIZATION_INFORMATION>()
-               , 4usize);
+    assert_eq!(::core::mem::align_of::<_KEY_SET_VIRTUALIZATION_INFORMATION>(),
+               4usize);
 }
 impl Clone for _KEY_SET_VIRTUALIZATION_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl _KEY_SET_VIRTUALIZATION_INFORMATION {
     #[inline]
     pub fn VirtualTarget(&self) -> ULONG {
-        unsafe {
-            ::core::mem::transmute(((self._bitfield_1 & (1usize as u32)) >>
-                                        0u32) as u32)
-        }
+        unsafe { ::core::mem::transmute(((self._bitfield_1 & (1usize as u32)) >> 0u32) as u32) }
     }
     #[inline]
     pub fn set_VirtualTarget(&mut self, val: ULONG) {
@@ -6969,10 +7278,7 @@ impl _KEY_SET_VIRTUALIZATION_INFORMATION {
     }
     #[inline]
     pub fn VirtualStore(&self) -> ULONG {
-        unsafe {
-            ::core::mem::transmute(((self._bitfield_1 & (2usize as u32)) >>
-                                        1u32) as u32)
-        }
+        unsafe { ::core::mem::transmute(((self._bitfield_1 & (2usize as u32)) >> 1u32) as u32) }
     }
     #[inline]
     pub fn set_VirtualStore(&mut self, val: ULONG) {
@@ -6981,10 +7287,7 @@ impl _KEY_SET_VIRTUALIZATION_INFORMATION {
     }
     #[inline]
     pub fn VirtualSource(&self) -> ULONG {
-        unsafe {
-            ::core::mem::transmute(((self._bitfield_1 & (4usize as u32)) >>
-                                        2u32) as u32)
-        }
+        unsafe { ::core::mem::transmute(((self._bitfield_1 & (4usize as u32)) >> 2u32) as u32) }
     }
     #[inline]
     pub fn set_VirtualSource(&mut self, val: ULONG) {
@@ -6994,22 +7297,17 @@ impl _KEY_SET_VIRTUALIZATION_INFORMATION {
     #[inline]
     pub fn Reserved(&self) -> ULONG {
         unsafe {
-            ::core::mem::transmute(((self._bitfield_1 &
-                                         (4294967288usize as u32)) >> 3u32) as
-                                       u32)
+            ::core::mem::transmute(((self._bitfield_1 & (4294967288usize as u32)) >> 3u32) as u32)
         }
     }
     #[inline]
     pub fn set_Reserved(&mut self, val: ULONG) {
         self._bitfield_1 &= !(4294967288usize as u32);
-        self._bitfield_1 |=
-            ((val as u32 as u32) << 3u32) & (4294967288usize as u32);
+        self._bitfield_1 |= ((val as u32 as u32) << 3u32) & (4294967288usize as u32);
     }
 }
-pub use self::_KEY_SET_VIRTUALIZATION_INFORMATION as
-        KEY_SET_VIRTUALIZATION_INFORMATION;
-pub type PKEY_SET_VIRTUALIZATION_INFORMATION =
-    *mut _KEY_SET_VIRTUALIZATION_INFORMATION;
+pub use self::_KEY_SET_VIRTUALIZATION_INFORMATION as KEY_SET_VIRTUALIZATION_INFORMATION;
+pub type PKEY_SET_VIRTUALIZATION_INFORMATION = *mut _KEY_SET_VIRTUALIZATION_INFORMATION;
 #[repr(i32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub enum _KEY_SET_INFORMATION_CLASS {
@@ -7032,13 +7330,15 @@ pub struct _KEY_VALUE_BASIC_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__KEY_VALUE_BASIC_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_KEY_VALUE_BASIC_INFORMATION>() ,
+    assert_eq!(::core::mem::size_of::<_KEY_VALUE_BASIC_INFORMATION>(),
                16usize);
-    assert_eq!(::core::mem::align_of::<_KEY_VALUE_BASIC_INFORMATION>() ,
+    assert_eq!(::core::mem::align_of::<_KEY_VALUE_BASIC_INFORMATION>(),
                4usize);
 }
 impl Clone for _KEY_VALUE_BASIC_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_KEY_VALUE_BASIC_INFORMATION as KEY_VALUE_BASIC_INFORMATION;
 pub type PKEY_VALUE_BASIC_INFORMATION = *mut _KEY_VALUE_BASIC_INFORMATION;
@@ -7054,13 +7354,15 @@ pub struct _KEY_VALUE_FULL_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__KEY_VALUE_FULL_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_KEY_VALUE_FULL_INFORMATION>() ,
+    assert_eq!(::core::mem::size_of::<_KEY_VALUE_FULL_INFORMATION>(),
                24usize);
-    assert_eq!(::core::mem::align_of::<_KEY_VALUE_FULL_INFORMATION>() ,
+    assert_eq!(::core::mem::align_of::<_KEY_VALUE_FULL_INFORMATION>(),
                4usize);
 }
 impl Clone for _KEY_VALUE_FULL_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_KEY_VALUE_FULL_INFORMATION as KEY_VALUE_FULL_INFORMATION;
 pub type PKEY_VALUE_FULL_INFORMATION = *mut _KEY_VALUE_FULL_INFORMATION;
@@ -7074,13 +7376,15 @@ pub struct _KEY_VALUE_PARTIAL_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__KEY_VALUE_PARTIAL_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_KEY_VALUE_PARTIAL_INFORMATION>() ,
+    assert_eq!(::core::mem::size_of::<_KEY_VALUE_PARTIAL_INFORMATION>(),
                16usize);
-    assert_eq!(::core::mem::align_of::<_KEY_VALUE_PARTIAL_INFORMATION>() ,
+    assert_eq!(::core::mem::align_of::<_KEY_VALUE_PARTIAL_INFORMATION>(),
                4usize);
 }
 impl Clone for _KEY_VALUE_PARTIAL_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_KEY_VALUE_PARTIAL_INFORMATION as KEY_VALUE_PARTIAL_INFORMATION;
 pub type PKEY_VALUE_PARTIAL_INFORMATION = *mut _KEY_VALUE_PARTIAL_INFORMATION;
@@ -7093,18 +7397,18 @@ pub struct _KEY_VALUE_PARTIAL_INFORMATION_ALIGN64 {
 }
 #[test]
 fn bindgen_test_layout__KEY_VALUE_PARTIAL_INFORMATION_ALIGN64() {
-    assert_eq!(::core::mem::size_of::<_KEY_VALUE_PARTIAL_INFORMATION_ALIGN64>()
-               , 12usize);
-    assert_eq!(::core::mem::align_of::<_KEY_VALUE_PARTIAL_INFORMATION_ALIGN64>()
-               , 4usize);
+    assert_eq!(::core::mem::size_of::<_KEY_VALUE_PARTIAL_INFORMATION_ALIGN64>(),
+               12usize);
+    assert_eq!(::core::mem::align_of::<_KEY_VALUE_PARTIAL_INFORMATION_ALIGN64>(),
+               4usize);
 }
 impl Clone for _KEY_VALUE_PARTIAL_INFORMATION_ALIGN64 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
-pub use self::_KEY_VALUE_PARTIAL_INFORMATION_ALIGN64 as
-        KEY_VALUE_PARTIAL_INFORMATION_ALIGN64;
-pub type PKEY_VALUE_PARTIAL_INFORMATION_ALIGN64 =
-    *mut _KEY_VALUE_PARTIAL_INFORMATION_ALIGN64;
+pub use self::_KEY_VALUE_PARTIAL_INFORMATION_ALIGN64 as KEY_VALUE_PARTIAL_INFORMATION_ALIGN64;
+pub type PKEY_VALUE_PARTIAL_INFORMATION_ALIGN64 = *mut _KEY_VALUE_PARTIAL_INFORMATION_ALIGN64;
 #[repr(C)]
 #[derive(Debug, Copy)]
 pub struct _KEY_VALUE_LAYER_INFORMATION {
@@ -7112,21 +7416,20 @@ pub struct _KEY_VALUE_LAYER_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__KEY_VALUE_LAYER_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_KEY_VALUE_LAYER_INFORMATION>() ,
+    assert_eq!(::core::mem::size_of::<_KEY_VALUE_LAYER_INFORMATION>(),
                4usize);
-    assert_eq!(::core::mem::align_of::<_KEY_VALUE_LAYER_INFORMATION>() ,
+    assert_eq!(::core::mem::align_of::<_KEY_VALUE_LAYER_INFORMATION>(),
                4usize);
 }
 impl Clone for _KEY_VALUE_LAYER_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl _KEY_VALUE_LAYER_INFORMATION {
     #[inline]
     pub fn IsTombstone(&self) -> ULONG {
-        unsafe {
-            ::core::mem::transmute(((self._bitfield_1 & (1usize as u32)) >>
-                                        0u32) as u32)
-        }
+        unsafe { ::core::mem::transmute(((self._bitfield_1 & (1usize as u32)) >> 0u32) as u32) }
     }
     #[inline]
     pub fn set_IsTombstone(&mut self, val: ULONG) {
@@ -7136,16 +7439,13 @@ impl _KEY_VALUE_LAYER_INFORMATION {
     #[inline]
     pub fn Reserved(&self) -> ULONG {
         unsafe {
-            ::core::mem::transmute(((self._bitfield_1 &
-                                         (4294967294usize as u32)) >> 1u32) as
-                                       u32)
+            ::core::mem::transmute(((self._bitfield_1 & (4294967294usize as u32)) >> 1u32) as u32)
         }
     }
     #[inline]
     pub fn set_Reserved(&mut self, val: ULONG) {
         self._bitfield_1 &= !(4294967294usize as u32);
-        self._bitfield_1 |=
-            ((val as u32 as u32) << 1u32) & (4294967294usize as u32);
+        self._bitfield_1 |= ((val as u32 as u32) << 1u32) & (4294967294usize as u32);
     }
 }
 pub use self::_KEY_VALUE_LAYER_INFORMATION as KEY_VALUE_LAYER_INFORMATION;
@@ -7160,11 +7460,13 @@ pub struct _KEY_VALUE_ENTRY {
 }
 #[test]
 fn bindgen_test_layout__KEY_VALUE_ENTRY() {
-    assert_eq!(::core::mem::size_of::<_KEY_VALUE_ENTRY>() , 24usize);
-    assert_eq!(::core::mem::align_of::<_KEY_VALUE_ENTRY>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_KEY_VALUE_ENTRY>(), 24usize);
+    assert_eq!(::core::mem::align_of::<_KEY_VALUE_ENTRY>(), 8usize);
 }
 impl Clone for _KEY_VALUE_ENTRY {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_KEY_VALUE_ENTRY as KEY_VALUE_ENTRY;
 pub type PKEY_VALUE_ENTRY = *mut _KEY_VALUE_ENTRY;
@@ -7187,19 +7489,18 @@ pub struct _KEY_TRUST_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__KEY_TRUST_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_KEY_TRUST_INFORMATION>() , 4usize);
-    assert_eq!(::core::mem::align_of::<_KEY_TRUST_INFORMATION>() , 4usize);
+    assert_eq!(::core::mem::size_of::<_KEY_TRUST_INFORMATION>(), 4usize);
+    assert_eq!(::core::mem::align_of::<_KEY_TRUST_INFORMATION>(), 4usize);
 }
 impl Clone for _KEY_TRUST_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl _KEY_TRUST_INFORMATION {
     #[inline]
     pub fn TrustedKey(&self) -> ULONG {
-        unsafe {
-            ::core::mem::transmute(((self._bitfield_1 & (1usize as u32)) >>
-                                        0u32) as u32)
-        }
+        unsafe { ::core::mem::transmute(((self._bitfield_1 & (1usize as u32)) >> 0u32) as u32) }
     }
     #[inline]
     pub fn set_TrustedKey(&mut self, val: ULONG) {
@@ -7209,16 +7510,13 @@ impl _KEY_TRUST_INFORMATION {
     #[inline]
     pub fn Reserved(&self) -> ULONG {
         unsafe {
-            ::core::mem::transmute(((self._bitfield_1 &
-                                         (4294967294usize as u32)) >> 1u32) as
-                                       u32)
+            ::core::mem::transmute(((self._bitfield_1 & (4294967294usize as u32)) >> 1u32) as u32)
         }
     }
     #[inline]
     pub fn set_Reserved(&mut self, val: ULONG) {
         self._bitfield_1 &= !(4294967294usize as u32);
-        self._bitfield_1 |=
-            ((val as u32 as u32) << 1u32) & (4294967294usize as u32);
+        self._bitfield_1 |= ((val as u32 as u32) << 1u32) & (4294967294usize as u32);
     }
 }
 pub use self::_KEY_TRUST_INFORMATION as KEY_TRUST_INFORMATION;
@@ -7230,17 +7528,22 @@ pub struct _OBJECT_NAME_INFORMATION {
 }
 #[test]
 fn bindgen_test_layout__OBJECT_NAME_INFORMATION() {
-    assert_eq!(::core::mem::size_of::<_OBJECT_NAME_INFORMATION>() , 16usize);
-    assert_eq!(::core::mem::align_of::<_OBJECT_NAME_INFORMATION>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_OBJECT_NAME_INFORMATION>(), 16usize);
+    assert_eq!(::core::mem::align_of::<_OBJECT_NAME_INFORMATION>(), 8usize);
 }
 impl Clone for _OBJECT_NAME_INFORMATION {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_OBJECT_NAME_INFORMATION as OBJECT_NAME_INFORMATION;
 pub type POBJECT_NAME_INFORMATION = *mut _OBJECT_NAME_INFORMATION;
 #[repr(i32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum _SECTION_INHERIT { ViewShare = 1, ViewUnmap = 2, }
+pub enum _SECTION_INHERIT {
+    ViewShare = 1,
+    ViewUnmap = 2,
+}
 pub use self::_SECTION_INHERIT as SECTION_INHERIT;
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -7250,11 +7553,13 @@ pub struct _CLIENT_ID {
 }
 #[test]
 fn bindgen_test_layout__CLIENT_ID() {
-    assert_eq!(::core::mem::size_of::<_CLIENT_ID>() , 16usize);
-    assert_eq!(::core::mem::align_of::<_CLIENT_ID>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_CLIENT_ID>(), 16usize);
+    assert_eq!(::core::mem::align_of::<_CLIENT_ID>(), 8usize);
 }
 impl Clone for _CLIENT_ID {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_CLIENT_ID as CLIENT_ID;
 pub type PCLIENT_ID = *mut CLIENT_ID;
@@ -7745,8 +8050,7 @@ extern "C" {
 extern "C" {
     #[link_name =
           "GUID_PROCESSOR_CORE_PARKING_AFFINITY_HISTORY_DECREASE_FACTOR"]
-    pub static GUID_PROCESSOR_CORE_PARKING_AFFINITY_HISTORY_DECREASE_FACTOR:
-               GUID;
+    pub static GUID_PROCESSOR_CORE_PARKING_AFFINITY_HISTORY_DECREASE_FACTOR: GUID;
 }
 extern "C" {
     #[link_name = "GUID_PROCESSOR_CORE_PARKING_AFFINITY_HISTORY_THRESHOLD"]
@@ -7759,14 +8063,12 @@ extern "C" {
 extern "C" {
     #[link_name =
           "GUID_PROCESSOR_CORE_PARKING_OVER_UTILIZATION_HISTORY_DECREASE_FACTOR"]
-    pub static GUID_PROCESSOR_CORE_PARKING_OVER_UTILIZATION_HISTORY_DECREASE_FACTOR:
-               GUID;
+    pub static GUID_PROCESSOR_CORE_PARKING_OVER_UTILIZATION_HISTORY_DECREASE_FACTOR: GUID;
 }
 extern "C" {
     #[link_name =
           "GUID_PROCESSOR_CORE_PARKING_OVER_UTILIZATION_HISTORY_THRESHOLD"]
-    pub static GUID_PROCESSOR_CORE_PARKING_OVER_UTILIZATION_HISTORY_THRESHOLD:
-               GUID;
+    pub static GUID_PROCESSOR_CORE_PARKING_OVER_UTILIZATION_HISTORY_THRESHOLD: GUID;
 }
 extern "C" {
     #[link_name = "GUID_PROCESSOR_CORE_PARKING_OVER_UTILIZATION_WEIGHTING"]
@@ -7971,21 +8273,14 @@ pub enum _SYSTEM_POWER_STATE {
 pub use self::_SYSTEM_POWER_STATE as SYSTEM_POWER_STATE;
 pub type PSYSTEM_POWER_STATE = *mut _SYSTEM_POWER_STATE;
 pub const PowerActionNone: _bindgen_ty_3 = _bindgen_ty_3::PowerActionNone;
-pub const PowerActionReserved: _bindgen_ty_3 =
-    _bindgen_ty_3::PowerActionReserved;
+pub const PowerActionReserved: _bindgen_ty_3 = _bindgen_ty_3::PowerActionReserved;
 pub const PowerActionSleep: _bindgen_ty_3 = _bindgen_ty_3::PowerActionSleep;
-pub const PowerActionHibernate: _bindgen_ty_3 =
-    _bindgen_ty_3::PowerActionHibernate;
-pub const PowerActionShutdown: _bindgen_ty_3 =
-    _bindgen_ty_3::PowerActionShutdown;
-pub const PowerActionShutdownReset: _bindgen_ty_3 =
-    _bindgen_ty_3::PowerActionShutdownReset;
-pub const PowerActionShutdownOff: _bindgen_ty_3 =
-    _bindgen_ty_3::PowerActionShutdownOff;
-pub const PowerActionWarmEject: _bindgen_ty_3 =
-    _bindgen_ty_3::PowerActionWarmEject;
-pub const PowerActionDisplayOff: _bindgen_ty_3 =
-    _bindgen_ty_3::PowerActionDisplayOff;
+pub const PowerActionHibernate: _bindgen_ty_3 = _bindgen_ty_3::PowerActionHibernate;
+pub const PowerActionShutdown: _bindgen_ty_3 = _bindgen_ty_3::PowerActionShutdown;
+pub const PowerActionShutdownReset: _bindgen_ty_3 = _bindgen_ty_3::PowerActionShutdownReset;
+pub const PowerActionShutdownOff: _bindgen_ty_3 = _bindgen_ty_3::PowerActionShutdownOff;
+pub const PowerActionWarmEject: _bindgen_ty_3 = _bindgen_ty_3::PowerActionWarmEject;
+pub const PowerActionDisplayOff: _bindgen_ty_3 = _bindgen_ty_3::PowerActionDisplayOff;
 #[repr(i32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub enum _bindgen_ty_3 {
@@ -8043,17 +8338,22 @@ pub struct _POWER_STATE {
 }
 #[test]
 fn bindgen_test_layout__POWER_STATE() {
-    assert_eq!(::core::mem::size_of::<_POWER_STATE>() , 4usize);
-    assert_eq!(::core::mem::align_of::<_POWER_STATE>() , 4usize);
+    assert_eq!(::core::mem::size_of::<_POWER_STATE>(), 4usize);
+    assert_eq!(::core::mem::align_of::<_POWER_STATE>(), 4usize);
 }
 impl Clone for _POWER_STATE {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_POWER_STATE as POWER_STATE;
 pub type PPOWER_STATE = *mut _POWER_STATE;
 #[repr(i32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum _POWER_STATE_TYPE { SystemPowerState = 0, DevicePowerState = 1, }
+pub enum _POWER_STATE_TYPE {
+    SystemPowerState = 0,
+    DevicePowerState = 1,
+}
 pub use self::_POWER_STATE_TYPE as POWER_STATE_TYPE;
 pub type PPOWER_STATE_TYPE = *mut _POWER_STATE_TYPE;
 #[repr(C)]
@@ -8075,21 +8375,20 @@ pub struct _SYSTEM_POWER_STATE_CONTEXT__bindgen_ty_1__bindgen_ty_1 {
 }
 #[test]
 fn bindgen_test_layout__SYSTEM_POWER_STATE_CONTEXT__bindgen_ty_1__bindgen_ty_1() {
-    assert_eq!(::core::mem::size_of::<_SYSTEM_POWER_STATE_CONTEXT__bindgen_ty_1__bindgen_ty_1>()
-               , 4usize);
+    assert_eq!(::core::mem::size_of::<_SYSTEM_POWER_STATE_CONTEXT__bindgen_ty_1__bindgen_ty_1>(),
+               4usize);
     assert_eq!(::core::mem::align_of::<_SYSTEM_POWER_STATE_CONTEXT__bindgen_ty_1__bindgen_ty_1>()
                , 4usize);
 }
 impl Clone for _SYSTEM_POWER_STATE_CONTEXT__bindgen_ty_1__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 impl _SYSTEM_POWER_STATE_CONTEXT__bindgen_ty_1__bindgen_ty_1 {
     #[inline]
     pub fn Reserved1(&self) -> ULONG {
-        unsafe {
-            ::core::mem::transmute(((self._bitfield_1 & (255usize as u32)) >>
-                                        0u32) as u32)
-        }
+        unsafe { ::core::mem::transmute(((self._bitfield_1 & (255usize as u32)) >> 0u32) as u32) }
     }
     #[inline]
     pub fn set_Reserved1(&mut self, val: ULONG) {
@@ -8098,103 +8397,92 @@ impl _SYSTEM_POWER_STATE_CONTEXT__bindgen_ty_1__bindgen_ty_1 {
     }
     #[inline]
     pub fn TargetSystemState(&self) -> ULONG {
-        unsafe {
-            ::core::mem::transmute(((self._bitfield_1 & (3840usize as u32)) >>
-                                        8u32) as u32)
-        }
+        unsafe { ::core::mem::transmute(((self._bitfield_1 & (3840usize as u32)) >> 8u32) as u32) }
     }
     #[inline]
     pub fn set_TargetSystemState(&mut self, val: ULONG) {
         self._bitfield_1 &= !(3840usize as u32);
-        self._bitfield_1 |=
-            ((val as u32 as u32) << 8u32) & (3840usize as u32);
+        self._bitfield_1 |= ((val as u32 as u32) << 8u32) & (3840usize as u32);
     }
     #[inline]
     pub fn EffectiveSystemState(&self) -> ULONG {
         unsafe {
-            ::core::mem::transmute(((self._bitfield_1 & (61440usize as u32))
-                                        >> 12u32) as u32)
+            ::core::mem::transmute(((self._bitfield_1 & (61440usize as u32)) >> 12u32) as u32)
         }
     }
     #[inline]
     pub fn set_EffectiveSystemState(&mut self, val: ULONG) {
         self._bitfield_1 &= !(61440usize as u32);
-        self._bitfield_1 |=
-            ((val as u32 as u32) << 12u32) & (61440usize as u32);
+        self._bitfield_1 |= ((val as u32 as u32) << 12u32) & (61440usize as u32);
     }
     #[inline]
     pub fn CurrentSystemState(&self) -> ULONG {
         unsafe {
-            ::core::mem::transmute(((self._bitfield_1 & (983040usize as u32))
-                                        >> 16u32) as u32)
+            ::core::mem::transmute(((self._bitfield_1 & (983040usize as u32)) >> 16u32) as u32)
         }
     }
     #[inline]
     pub fn set_CurrentSystemState(&mut self, val: ULONG) {
         self._bitfield_1 &= !(983040usize as u32);
-        self._bitfield_1 |=
-            ((val as u32 as u32) << 16u32) & (983040usize as u32);
+        self._bitfield_1 |= ((val as u32 as u32) << 16u32) & (983040usize as u32);
     }
     #[inline]
     pub fn IgnoreHibernationPath(&self) -> ULONG {
         unsafe {
-            ::core::mem::transmute(((self._bitfield_1 & (1048576usize as u32))
-                                        >> 20u32) as u32)
+            ::core::mem::transmute(((self._bitfield_1 & (1048576usize as u32)) >> 20u32) as u32)
         }
     }
     #[inline]
     pub fn set_IgnoreHibernationPath(&mut self, val: ULONG) {
         self._bitfield_1 &= !(1048576usize as u32);
-        self._bitfield_1 |=
-            ((val as u32 as u32) << 20u32) & (1048576usize as u32);
+        self._bitfield_1 |= ((val as u32 as u32) << 20u32) & (1048576usize as u32);
     }
     #[inline]
     pub fn PseudoTransition(&self) -> ULONG {
         unsafe {
-            ::core::mem::transmute(((self._bitfield_1 & (2097152usize as u32))
-                                        >> 21u32) as u32)
+            ::core::mem::transmute(((self._bitfield_1 & (2097152usize as u32)) >> 21u32) as u32)
         }
     }
     #[inline]
     pub fn set_PseudoTransition(&mut self, val: ULONG) {
         self._bitfield_1 &= !(2097152usize as u32);
-        self._bitfield_1 |=
-            ((val as u32 as u32) << 21u32) & (2097152usize as u32);
+        self._bitfield_1 |= ((val as u32 as u32) << 21u32) & (2097152usize as u32);
     }
     #[inline]
     pub fn Reserved2(&self) -> ULONG {
         unsafe {
-            ::core::mem::transmute(((self._bitfield_1 &
-                                         (4290772992usize as u32)) >> 22u32)
-                                       as u32)
+            ::core::mem::transmute(((self._bitfield_1 & (4290772992usize as u32)) >> 22u32) as u32)
         }
     }
     #[inline]
     pub fn set_Reserved2(&mut self, val: ULONG) {
         self._bitfield_1 &= !(4290772992usize as u32);
-        self._bitfield_1 |=
-            ((val as u32 as u32) << 22u32) & (4290772992usize as u32);
+        self._bitfield_1 |= ((val as u32 as u32) << 22u32) & (4290772992usize as u32);
     }
 }
 #[test]
 fn bindgen_test_layout__SYSTEM_POWER_STATE_CONTEXT__bindgen_ty_1() {
-    assert_eq!(::core::mem::size_of::<_SYSTEM_POWER_STATE_CONTEXT__bindgen_ty_1>()
-               , 4usize);
-    assert_eq!(::core::mem::align_of::<_SYSTEM_POWER_STATE_CONTEXT__bindgen_ty_1>()
-               , 4usize);
+    assert_eq!(::core::mem::size_of::<_SYSTEM_POWER_STATE_CONTEXT__bindgen_ty_1>(),
+               4usize);
+    assert_eq!(::core::mem::align_of::<_SYSTEM_POWER_STATE_CONTEXT__bindgen_ty_1>(),
+               4usize);
 }
 impl Clone for _SYSTEM_POWER_STATE_CONTEXT__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[test]
 fn bindgen_test_layout__SYSTEM_POWER_STATE_CONTEXT() {
-    assert_eq!(::core::mem::size_of::<_SYSTEM_POWER_STATE_CONTEXT>() ,
+    assert_eq!(::core::mem::size_of::<_SYSTEM_POWER_STATE_CONTEXT>(),
                4usize);
-    assert_eq!(::core::mem::align_of::<_SYSTEM_POWER_STATE_CONTEXT>() ,
+    assert_eq!(::core::mem::align_of::<_SYSTEM_POWER_STATE_CONTEXT>(),
                4usize);
 }
 impl Clone for _SYSTEM_POWER_STATE_CONTEXT {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_SYSTEM_POWER_STATE_CONTEXT as SYSTEM_POWER_STATE_CONTEXT;
 pub type PSYSTEM_POWER_STATE_CONTEXT = *mut _SYSTEM_POWER_STATE_CONTEXT;
@@ -8222,31 +8510,37 @@ pub struct _COUNTED_REASON_CONTEXT__bindgen_ty_1__bindgen_ty_1 {
 }
 #[test]
 fn bindgen_test_layout__COUNTED_REASON_CONTEXT__bindgen_ty_1__bindgen_ty_1() {
-    assert_eq!(::core::mem::size_of::<_COUNTED_REASON_CONTEXT__bindgen_ty_1__bindgen_ty_1>()
-               , 32usize);
-    assert_eq!(::core::mem::align_of::<_COUNTED_REASON_CONTEXT__bindgen_ty_1__bindgen_ty_1>()
-               , 8usize);
+    assert_eq!(::core::mem::size_of::<_COUNTED_REASON_CONTEXT__bindgen_ty_1__bindgen_ty_1>(),
+               32usize);
+    assert_eq!(::core::mem::align_of::<_COUNTED_REASON_CONTEXT__bindgen_ty_1__bindgen_ty_1>(),
+               8usize);
 }
 impl Clone for _COUNTED_REASON_CONTEXT__bindgen_ty_1__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[test]
 fn bindgen_test_layout__COUNTED_REASON_CONTEXT__bindgen_ty_1() {
-    assert_eq!(::core::mem::size_of::<_COUNTED_REASON_CONTEXT__bindgen_ty_1>()
-               , 32usize);
-    assert_eq!(::core::mem::align_of::<_COUNTED_REASON_CONTEXT__bindgen_ty_1>()
-               , 8usize);
+    assert_eq!(::core::mem::size_of::<_COUNTED_REASON_CONTEXT__bindgen_ty_1>(),
+               32usize);
+    assert_eq!(::core::mem::align_of::<_COUNTED_REASON_CONTEXT__bindgen_ty_1>(),
+               8usize);
 }
 impl Clone for _COUNTED_REASON_CONTEXT__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[test]
 fn bindgen_test_layout__COUNTED_REASON_CONTEXT() {
-    assert_eq!(::core::mem::size_of::<_COUNTED_REASON_CONTEXT>() , 40usize);
-    assert_eq!(::core::mem::align_of::<_COUNTED_REASON_CONTEXT>() , 8usize);
+    assert_eq!(::core::mem::size_of::<_COUNTED_REASON_CONTEXT>(), 40usize);
+    assert_eq!(::core::mem::align_of::<_COUNTED_REASON_CONTEXT>(), 8usize);
 }
 impl Clone for _COUNTED_REASON_CONTEXT {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_COUNTED_REASON_CONTEXT as COUNTED_REASON_CONTEXT;
 pub type PCOUNTED_REASON_CONTEXT = *mut _COUNTED_REASON_CONTEXT;
@@ -8256,7 +8550,10 @@ pub const LT_DONT_CARE: _bindgen_ty_4 = _bindgen_ty_4::LT_DONT_CARE;
 pub const LT_LOWEST_LATENCY: _bindgen_ty_4 = _bindgen_ty_4::LT_LOWEST_LATENCY;
 #[repr(i32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum _bindgen_ty_4 { LT_DONT_CARE = 0, LT_LOWEST_LATENCY = 1, }
+pub enum _bindgen_ty_4 {
+    LT_DONT_CARE = 0,
+    LT_LOWEST_LATENCY = 1,
+}
 pub use self::_bindgen_ty_4 as LATENCY_TIME;
 #[repr(i32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -8282,175 +8579,114 @@ pub struct CM_Power_Data_s {
 }
 #[test]
 fn bindgen_test_layout_CM_Power_Data_s() {
-    assert_eq!(::core::mem::size_of::<CM_Power_Data_s>() , 56usize);
-    assert_eq!(::core::mem::align_of::<CM_Power_Data_s>() , 4usize);
+    assert_eq!(::core::mem::size_of::<CM_Power_Data_s>(), 56usize);
+    assert_eq!(::core::mem::align_of::<CM_Power_Data_s>(), 4usize);
 }
 impl Clone for CM_Power_Data_s {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::CM_Power_Data_s as CM_POWER_DATA;
 pub type PCM_POWER_DATA = *mut CM_Power_Data_s;
-pub const SystemPowerPolicyAc: _bindgen_ty_5 =
-    _bindgen_ty_5::SystemPowerPolicyAc;
-pub const SystemPowerPolicyDc: _bindgen_ty_5 =
-    _bindgen_ty_5::SystemPowerPolicyDc;
-pub const VerifySystemPolicyAc: _bindgen_ty_5 =
-    _bindgen_ty_5::VerifySystemPolicyAc;
-pub const VerifySystemPolicyDc: _bindgen_ty_5 =
-    _bindgen_ty_5::VerifySystemPolicyDc;
-pub const SystemPowerCapabilities: _bindgen_ty_5 =
-    _bindgen_ty_5::SystemPowerCapabilities;
-pub const SystemBatteryState: _bindgen_ty_5 =
-    _bindgen_ty_5::SystemBatteryState;
-pub const SystemPowerStateHandler: _bindgen_ty_5 =
-    _bindgen_ty_5::SystemPowerStateHandler;
-pub const ProcessorStateHandler: _bindgen_ty_5 =
-    _bindgen_ty_5::ProcessorStateHandler;
-pub const SystemPowerPolicyCurrent: _bindgen_ty_5 =
-    _bindgen_ty_5::SystemPowerPolicyCurrent;
-pub const AdministratorPowerPolicy: _bindgen_ty_5 =
-    _bindgen_ty_5::AdministratorPowerPolicy;
-pub const SystemReserveHiberFile: _bindgen_ty_5 =
-    _bindgen_ty_5::SystemReserveHiberFile;
-pub const ProcessorInformation: _bindgen_ty_5 =
-    _bindgen_ty_5::ProcessorInformation;
-pub const SystemPowerInformation: _bindgen_ty_5 =
-    _bindgen_ty_5::SystemPowerInformation;
-pub const ProcessorStateHandler2: _bindgen_ty_5 =
-    _bindgen_ty_5::ProcessorStateHandler2;
+pub const SystemPowerPolicyAc: _bindgen_ty_5 = _bindgen_ty_5::SystemPowerPolicyAc;
+pub const SystemPowerPolicyDc: _bindgen_ty_5 = _bindgen_ty_5::SystemPowerPolicyDc;
+pub const VerifySystemPolicyAc: _bindgen_ty_5 = _bindgen_ty_5::VerifySystemPolicyAc;
+pub const VerifySystemPolicyDc: _bindgen_ty_5 = _bindgen_ty_5::VerifySystemPolicyDc;
+pub const SystemPowerCapabilities: _bindgen_ty_5 = _bindgen_ty_5::SystemPowerCapabilities;
+pub const SystemBatteryState: _bindgen_ty_5 = _bindgen_ty_5::SystemBatteryState;
+pub const SystemPowerStateHandler: _bindgen_ty_5 = _bindgen_ty_5::SystemPowerStateHandler;
+pub const ProcessorStateHandler: _bindgen_ty_5 = _bindgen_ty_5::ProcessorStateHandler;
+pub const SystemPowerPolicyCurrent: _bindgen_ty_5 = _bindgen_ty_5::SystemPowerPolicyCurrent;
+pub const AdministratorPowerPolicy: _bindgen_ty_5 = _bindgen_ty_5::AdministratorPowerPolicy;
+pub const SystemReserveHiberFile: _bindgen_ty_5 = _bindgen_ty_5::SystemReserveHiberFile;
+pub const ProcessorInformation: _bindgen_ty_5 = _bindgen_ty_5::ProcessorInformation;
+pub const SystemPowerInformation: _bindgen_ty_5 = _bindgen_ty_5::SystemPowerInformation;
+pub const ProcessorStateHandler2: _bindgen_ty_5 = _bindgen_ty_5::ProcessorStateHandler2;
 pub const LastWakeTime: _bindgen_ty_5 = _bindgen_ty_5::LastWakeTime;
 pub const LastSleepTime: _bindgen_ty_5 = _bindgen_ty_5::LastSleepTime;
-pub const SystemExecutionState: _bindgen_ty_5 =
-    _bindgen_ty_5::SystemExecutionState;
+pub const SystemExecutionState: _bindgen_ty_5 = _bindgen_ty_5::SystemExecutionState;
 pub const SystemPowerStateNotifyHandler: _bindgen_ty_5 =
     _bindgen_ty_5::SystemPowerStateNotifyHandler;
-pub const ProcessorPowerPolicyAc: _bindgen_ty_5 =
-    _bindgen_ty_5::ProcessorPowerPolicyAc;
-pub const ProcessorPowerPolicyDc: _bindgen_ty_5 =
-    _bindgen_ty_5::ProcessorPowerPolicyDc;
-pub const VerifyProcessorPowerPolicyAc: _bindgen_ty_5 =
-    _bindgen_ty_5::VerifyProcessorPowerPolicyAc;
-pub const VerifyProcessorPowerPolicyDc: _bindgen_ty_5 =
-    _bindgen_ty_5::VerifyProcessorPowerPolicyDc;
-pub const ProcessorPowerPolicyCurrent: _bindgen_ty_5 =
-    _bindgen_ty_5::ProcessorPowerPolicyCurrent;
-pub const SystemPowerStateLogging: _bindgen_ty_5 =
-    _bindgen_ty_5::SystemPowerStateLogging;
-pub const SystemPowerLoggingEntry: _bindgen_ty_5 =
-    _bindgen_ty_5::SystemPowerLoggingEntry;
-pub const SetPowerSettingValue: _bindgen_ty_5 =
-    _bindgen_ty_5::SetPowerSettingValue;
-pub const NotifyUserPowerSetting: _bindgen_ty_5 =
-    _bindgen_ty_5::NotifyUserPowerSetting;
-pub const PowerInformationLevelUnused0: _bindgen_ty_5 =
-    _bindgen_ty_5::PowerInformationLevelUnused0;
+pub const ProcessorPowerPolicyAc: _bindgen_ty_5 = _bindgen_ty_5::ProcessorPowerPolicyAc;
+pub const ProcessorPowerPolicyDc: _bindgen_ty_5 = _bindgen_ty_5::ProcessorPowerPolicyDc;
+pub const VerifyProcessorPowerPolicyAc: _bindgen_ty_5 = _bindgen_ty_5::VerifyProcessorPowerPolicyAc;
+pub const VerifyProcessorPowerPolicyDc: _bindgen_ty_5 = _bindgen_ty_5::VerifyProcessorPowerPolicyDc;
+pub const ProcessorPowerPolicyCurrent: _bindgen_ty_5 = _bindgen_ty_5::ProcessorPowerPolicyCurrent;
+pub const SystemPowerStateLogging: _bindgen_ty_5 = _bindgen_ty_5::SystemPowerStateLogging;
+pub const SystemPowerLoggingEntry: _bindgen_ty_5 = _bindgen_ty_5::SystemPowerLoggingEntry;
+pub const SetPowerSettingValue: _bindgen_ty_5 = _bindgen_ty_5::SetPowerSettingValue;
+pub const NotifyUserPowerSetting: _bindgen_ty_5 = _bindgen_ty_5::NotifyUserPowerSetting;
+pub const PowerInformationLevelUnused0: _bindgen_ty_5 = _bindgen_ty_5::PowerInformationLevelUnused0;
 pub const SystemMonitorHiberBootPowerOff: _bindgen_ty_5 =
     _bindgen_ty_5::SystemMonitorHiberBootPowerOff;
 pub const SystemVideoState: _bindgen_ty_5 = _bindgen_ty_5::SystemVideoState;
-pub const TraceApplicationPowerMessage: _bindgen_ty_5 =
-    _bindgen_ty_5::TraceApplicationPowerMessage;
+pub const TraceApplicationPowerMessage: _bindgen_ty_5 = _bindgen_ty_5::TraceApplicationPowerMessage;
 pub const TraceApplicationPowerMessageEnd: _bindgen_ty_5 =
     _bindgen_ty_5::TraceApplicationPowerMessageEnd;
-pub const ProcessorPerfStates: _bindgen_ty_5 =
-    _bindgen_ty_5::ProcessorPerfStates;
-pub const ProcessorIdleStates: _bindgen_ty_5 =
-    _bindgen_ty_5::ProcessorIdleStates;
+pub const ProcessorPerfStates: _bindgen_ty_5 = _bindgen_ty_5::ProcessorPerfStates;
+pub const ProcessorIdleStates: _bindgen_ty_5 = _bindgen_ty_5::ProcessorIdleStates;
 pub const ProcessorCap: _bindgen_ty_5 = _bindgen_ty_5::ProcessorCap;
 pub const SystemWakeSource: _bindgen_ty_5 = _bindgen_ty_5::SystemWakeSource;
-pub const SystemHiberFileInformation: _bindgen_ty_5 =
-    _bindgen_ty_5::SystemHiberFileInformation;
-pub const TraceServicePowerMessage: _bindgen_ty_5 =
-    _bindgen_ty_5::TraceServicePowerMessage;
+pub const SystemHiberFileInformation: _bindgen_ty_5 = _bindgen_ty_5::SystemHiberFileInformation;
+pub const TraceServicePowerMessage: _bindgen_ty_5 = _bindgen_ty_5::TraceServicePowerMessage;
 pub const ProcessorLoad: _bindgen_ty_5 = _bindgen_ty_5::ProcessorLoad;
-pub const PowerShutdownNotification: _bindgen_ty_5 =
-    _bindgen_ty_5::PowerShutdownNotification;
-pub const MonitorCapabilities: _bindgen_ty_5 =
-    _bindgen_ty_5::MonitorCapabilities;
+pub const PowerShutdownNotification: _bindgen_ty_5 = _bindgen_ty_5::PowerShutdownNotification;
+pub const MonitorCapabilities: _bindgen_ty_5 = _bindgen_ty_5::MonitorCapabilities;
 pub const SessionPowerInit: _bindgen_ty_5 = _bindgen_ty_5::SessionPowerInit;
-pub const SessionDisplayState: _bindgen_ty_5 =
-    _bindgen_ty_5::SessionDisplayState;
-pub const PowerRequestCreate: _bindgen_ty_5 =
-    _bindgen_ty_5::PowerRequestCreate;
-pub const PowerRequestAction: _bindgen_ty_5 =
-    _bindgen_ty_5::PowerRequestAction;
-pub const GetPowerRequestList: _bindgen_ty_5 =
-    _bindgen_ty_5::GetPowerRequestList;
-pub const ProcessorInformationEx: _bindgen_ty_5 =
-    _bindgen_ty_5::ProcessorInformationEx;
+pub const SessionDisplayState: _bindgen_ty_5 = _bindgen_ty_5::SessionDisplayState;
+pub const PowerRequestCreate: _bindgen_ty_5 = _bindgen_ty_5::PowerRequestCreate;
+pub const PowerRequestAction: _bindgen_ty_5 = _bindgen_ty_5::PowerRequestAction;
+pub const GetPowerRequestList: _bindgen_ty_5 = _bindgen_ty_5::GetPowerRequestList;
+pub const ProcessorInformationEx: _bindgen_ty_5 = _bindgen_ty_5::ProcessorInformationEx;
 pub const NotifyUserModeLegacyPowerEvent: _bindgen_ty_5 =
     _bindgen_ty_5::NotifyUserModeLegacyPowerEvent;
 pub const GroupPark: _bindgen_ty_5 = _bindgen_ty_5::GroupPark;
-pub const ProcessorIdleDomains: _bindgen_ty_5 =
-    _bindgen_ty_5::ProcessorIdleDomains;
+pub const ProcessorIdleDomains: _bindgen_ty_5 = _bindgen_ty_5::ProcessorIdleDomains;
 pub const WakeTimerList: _bindgen_ty_5 = _bindgen_ty_5::WakeTimerList;
-pub const SystemHiberFileSize: _bindgen_ty_5 =
-    _bindgen_ty_5::SystemHiberFileSize;
-pub const ProcessorIdleStatesHv: _bindgen_ty_5 =
-    _bindgen_ty_5::ProcessorIdleStatesHv;
-pub const ProcessorPerfStatesHv: _bindgen_ty_5 =
-    _bindgen_ty_5::ProcessorPerfStatesHv;
-pub const ProcessorPerfCapHv: _bindgen_ty_5 =
-    _bindgen_ty_5::ProcessorPerfCapHv;
+pub const SystemHiberFileSize: _bindgen_ty_5 = _bindgen_ty_5::SystemHiberFileSize;
+pub const ProcessorIdleStatesHv: _bindgen_ty_5 = _bindgen_ty_5::ProcessorIdleStatesHv;
+pub const ProcessorPerfStatesHv: _bindgen_ty_5 = _bindgen_ty_5::ProcessorPerfStatesHv;
+pub const ProcessorPerfCapHv: _bindgen_ty_5 = _bindgen_ty_5::ProcessorPerfCapHv;
 pub const ProcessorSetIdle: _bindgen_ty_5 = _bindgen_ty_5::ProcessorSetIdle;
-pub const LogicalProcessorIdling: _bindgen_ty_5 =
-    _bindgen_ty_5::LogicalProcessorIdling;
+pub const LogicalProcessorIdling: _bindgen_ty_5 = _bindgen_ty_5::LogicalProcessorIdling;
 pub const UserPresence: _bindgen_ty_5 = _bindgen_ty_5::UserPresence;
-pub const PowerSettingNotificationName: _bindgen_ty_5 =
-    _bindgen_ty_5::PowerSettingNotificationName;
-pub const GetPowerSettingValue: _bindgen_ty_5 =
-    _bindgen_ty_5::GetPowerSettingValue;
+pub const PowerSettingNotificationName: _bindgen_ty_5 = _bindgen_ty_5::PowerSettingNotificationName;
+pub const GetPowerSettingValue: _bindgen_ty_5 = _bindgen_ty_5::GetPowerSettingValue;
 pub const IdleResiliency: _bindgen_ty_5 = _bindgen_ty_5::IdleResiliency;
 pub const SessionRITState: _bindgen_ty_5 = _bindgen_ty_5::SessionRITState;
-pub const SessionConnectNotification: _bindgen_ty_5 =
-    _bindgen_ty_5::SessionConnectNotification;
-pub const SessionPowerCleanup: _bindgen_ty_5 =
-    _bindgen_ty_5::SessionPowerCleanup;
+pub const SessionConnectNotification: _bindgen_ty_5 = _bindgen_ty_5::SessionConnectNotification;
+pub const SessionPowerCleanup: _bindgen_ty_5 = _bindgen_ty_5::SessionPowerCleanup;
 pub const SessionLockState: _bindgen_ty_5 = _bindgen_ty_5::SessionLockState;
-pub const SystemHiberbootState: _bindgen_ty_5 =
-    _bindgen_ty_5::SystemHiberbootState;
-pub const PlatformInformation: _bindgen_ty_5 =
-    _bindgen_ty_5::PlatformInformation;
+pub const SystemHiberbootState: _bindgen_ty_5 = _bindgen_ty_5::SystemHiberbootState;
+pub const PlatformInformation: _bindgen_ty_5 = _bindgen_ty_5::PlatformInformation;
 pub const PdcInvocation: _bindgen_ty_5 = _bindgen_ty_5::PdcInvocation;
 pub const MonitorInvocation: _bindgen_ty_5 = _bindgen_ty_5::MonitorInvocation;
 pub const FirmwareTableInformationRegistered: _bindgen_ty_5 =
     _bindgen_ty_5::FirmwareTableInformationRegistered;
-pub const SetShutdownSelectedTime: _bindgen_ty_5 =
-    _bindgen_ty_5::SetShutdownSelectedTime;
-pub const SuspendResumeInvocation: _bindgen_ty_5 =
-    _bindgen_ty_5::SuspendResumeInvocation;
-pub const PlmPowerRequestCreate: _bindgen_ty_5 =
-    _bindgen_ty_5::PlmPowerRequestCreate;
+pub const SetShutdownSelectedTime: _bindgen_ty_5 = _bindgen_ty_5::SetShutdownSelectedTime;
+pub const SuspendResumeInvocation: _bindgen_ty_5 = _bindgen_ty_5::SuspendResumeInvocation;
+pub const PlmPowerRequestCreate: _bindgen_ty_5 = _bindgen_ty_5::PlmPowerRequestCreate;
 pub const ScreenOff: _bindgen_ty_5 = _bindgen_ty_5::ScreenOff;
-pub const CsDeviceNotification: _bindgen_ty_5 =
-    _bindgen_ty_5::CsDeviceNotification;
+pub const CsDeviceNotification: _bindgen_ty_5 = _bindgen_ty_5::CsDeviceNotification;
 pub const PlatformRole: _bindgen_ty_5 = _bindgen_ty_5::PlatformRole;
-pub const LastResumePerformance: _bindgen_ty_5 =
-    _bindgen_ty_5::LastResumePerformance;
+pub const LastResumePerformance: _bindgen_ty_5 = _bindgen_ty_5::LastResumePerformance;
 pub const DisplayBurst: _bindgen_ty_5 = _bindgen_ty_5::DisplayBurst;
 pub const ExitLatencySamplingPercentage: _bindgen_ty_5 =
     _bindgen_ty_5::ExitLatencySamplingPercentage;
-pub const RegisterSpmPowerSettings: _bindgen_ty_5 =
-    _bindgen_ty_5::RegisterSpmPowerSettings;
-pub const PlatformIdleStates: _bindgen_ty_5 =
-    _bindgen_ty_5::PlatformIdleStates;
+pub const RegisterSpmPowerSettings: _bindgen_ty_5 = _bindgen_ty_5::RegisterSpmPowerSettings;
+pub const PlatformIdleStates: _bindgen_ty_5 = _bindgen_ty_5::PlatformIdleStates;
 pub const ProcessorIdleVeto: _bindgen_ty_5 = _bindgen_ty_5::ProcessorIdleVeto;
 pub const PlatformIdleVeto: _bindgen_ty_5 = _bindgen_ty_5::PlatformIdleVeto;
-pub const SystemBatteryStatePrecise: _bindgen_ty_5 =
-    _bindgen_ty_5::SystemBatteryStatePrecise;
+pub const SystemBatteryStatePrecise: _bindgen_ty_5 = _bindgen_ty_5::SystemBatteryStatePrecise;
 pub const ThermalEvent: _bindgen_ty_5 = _bindgen_ty_5::ThermalEvent;
-pub const PowerRequestActionInternal: _bindgen_ty_5 =
-    _bindgen_ty_5::PowerRequestActionInternal;
-pub const BatteryDeviceState: _bindgen_ty_5 =
-    _bindgen_ty_5::BatteryDeviceState;
-pub const PowerInformationInternal: _bindgen_ty_5 =
-    _bindgen_ty_5::PowerInformationInternal;
+pub const PowerRequestActionInternal: _bindgen_ty_5 = _bindgen_ty_5::PowerRequestActionInternal;
+pub const BatteryDeviceState: _bindgen_ty_5 = _bindgen_ty_5::BatteryDeviceState;
+pub const PowerInformationInternal: _bindgen_ty_5 = _bindgen_ty_5::PowerInformationInternal;
 pub const ThermalStandby: _bindgen_ty_5 = _bindgen_ty_5::ThermalStandby;
-pub const SystemHiberFileType: _bindgen_ty_5 =
-    _bindgen_ty_5::SystemHiberFileType;
-pub const PhysicalPowerButtonPress: _bindgen_ty_5 =
-    _bindgen_ty_5::PhysicalPowerButtonPress;
-pub const PowerInformationLevelMaximum: _bindgen_ty_5 =
-    _bindgen_ty_5::PowerInformationLevelMaximum;
+pub const SystemHiberFileType: _bindgen_ty_5 = _bindgen_ty_5::SystemHiberFileType;
+pub const PhysicalPowerButtonPress: _bindgen_ty_5 = _bindgen_ty_5::PhysicalPowerButtonPress;
+pub const PowerInformationLevelMaximum: _bindgen_ty_5 = _bindgen_ty_5::PowerInformationLevelMaximum;
 #[repr(i32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub enum _bindgen_ty_5 {
@@ -8567,11 +8803,13 @@ pub struct _POWER_USER_PRESENCE {
 }
 #[test]
 fn bindgen_test_layout__POWER_USER_PRESENCE() {
-    assert_eq!(::core::mem::size_of::<_POWER_USER_PRESENCE>() , 4usize);
-    assert_eq!(::core::mem::align_of::<_POWER_USER_PRESENCE>() , 4usize);
+    assert_eq!(::core::mem::size_of::<_POWER_USER_PRESENCE>(), 4usize);
+    assert_eq!(::core::mem::align_of::<_POWER_USER_PRESENCE>(), 4usize);
 }
 impl Clone for _POWER_USER_PRESENCE {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_POWER_USER_PRESENCE as POWER_USER_PRESENCE;
 pub type PPOWER_USER_PRESENCE = *mut _POWER_USER_PRESENCE;
@@ -8583,11 +8821,13 @@ pub struct _POWER_SESSION_CONNECT {
 }
 #[test]
 fn bindgen_test_layout__POWER_SESSION_CONNECT() {
-    assert_eq!(::core::mem::size_of::<_POWER_SESSION_CONNECT>() , 2usize);
-    assert_eq!(::core::mem::align_of::<_POWER_SESSION_CONNECT>() , 1usize);
+    assert_eq!(::core::mem::size_of::<_POWER_SESSION_CONNECT>(), 2usize);
+    assert_eq!(::core::mem::align_of::<_POWER_SESSION_CONNECT>(), 1usize);
 }
 impl Clone for _POWER_SESSION_CONNECT {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub use self::_POWER_SESSION_CONNECT as POWER_SESSION_CONNECT;
 pub type PPOWER_SESSION_CONNECT = *mut _POWER_SESSION_CONNECT;
@@ -8599,8 +8839,7 @@ pub struct _POWER_SESSION_TIMEOUTS {
 }
 #[test]
 fn bindgen_test_layout__POWER_SESSION_TIMEOUTS() {
-    assert_eq!(::core::mem::size_of::<_POWER_SESSION_TIMEOUTS>() , 8usize);
-    assert_eq!(::core::mem::align_of::<_POWER_SESSION_TIMEOUTS>() , 4usize);
+    assert_eq!(::core::mem::size_of::<_POWER_SESSION_TIMEOUTS>(), 8usize);
 }
 impl Clone for _POWER_SESSION_TIMEOUTS {
     fn clone(&self) -> Self { *self }
