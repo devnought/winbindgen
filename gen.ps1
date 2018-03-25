@@ -1,19 +1,13 @@
 bindgen `
---use-core `
---no-unstable-rust `
---conservative-inline-namespaces `
---ctypes-prefix 'libc' `
---raw-line '#![no_std]' `
---raw-line '#![allow(non_snake_case)]' `
---raw-line '#![allow(non_camel_case_types)]' `
---raw-line '#![allow(non_upper_case_globals)]' `
---raw-line '#![allow(improper_ctypes)]' `
---raw-line 'extern crate libc;' `
-'C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\km\ntddk.h' `
+--no-layout-tests `
+--no-derive-copy `
+--no-derive-debug `
+--no-doc-comments `
+--no-rustfmt-bindings `
+--output './src/lib.rs' `
+header.h `
 -- `
--D '_X86_' `
--I 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\km' `
--I 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\mmos' `
--I 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared' `
--I 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt' `
--I 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um'
+-I 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared' `
+-I 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\km' `
+-I 'C:\Program Files (x86)\Windows Kits\10\Include\wdf\kmdf\1.23'
+#-I 'C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include'
